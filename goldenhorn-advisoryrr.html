@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Horn Advisory — Turkey–Europe Trade Consultancy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --navy:#0A1628;--navy-mid:#112040;
+  --gold:#C4984A;--gold-light:#D4AD6A;
+  --cream:#F7F2E8;--white:#FDFAF5;
+  --text-dark:#0A1628;--text-mid:#1E2D42;--text-muted:#4A5A6A;
+  --border:rgba(196,152,74,0.2);
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text-dark);overflow-x:hidden;font-weight:400;-webkit-font-smoothing:antialiased;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5vw;background:rgba(10,22,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,152,74,0.15);transition:padding 0.3s;}
+.nav-logo{display:flex;flex-direction:row;align-items:center;gap:0.75rem;text-decoration:none;}
+.nav-logo-icon{width:32px;height:32px;flex-shrink:0;}
+.nav-logo-text{display:flex;flex-direction:column;gap:1px;}
+.nav-logo-text span:first-child{font-family:'Cormorant Garant',serif;font-size:1.25rem;font-weight:500;color:var(--white);letter-spacing:0.03em;}
+.nav-logo-text span:last-child{font-size:0.56rem;font-weight:300;color:var(--gold);letter-spacing:0.22em;text-transform:uppercase;}
+.nav-right{display:flex;align-items:center;gap:1.5rem;}
+.nav-links{display:flex;gap:1.75rem;list-style:none;}
+.nav-links a{color:rgba(253,250,245,0.8);text-decoration:none;font-size:0.75rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{border:1px solid var(--gold)!important;color:var(--gold)!important;padding:0.45rem 1.1rem;border-radius:2px;transition:background 0.2s,color 0.2s!important;}
+.nav-cta:hover{background:var(--gold)!important;color:var(--navy)!important;}
+.lang-toggle{display:flex;align-items:center;border:1px solid rgba(196,152,74,0.35);border-radius:2px;overflow:hidden;flex-shrink:0;}
+.lang-btn{background:transparent;border:none;color:rgba(253,250,245,0.5);font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:400;letter-spacing:0.1em;padding:0.32rem 0.65rem;cursor:pointer;transition:background 0.2s,color 0.2s;}
+.lang-btn.active{background:var(--gold);color:var(--navy);font-weight:500;}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+.menu-toggle span{display:block;width:20px;height:1px;background:var(--gold);}
+@media(max-width:960px){.nav-links{display:none;}.menu-toggle{display:flex;}}
+
+/* HERO */
+#hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:9rem 5vw 6rem;position:relative;overflow:hidden;}
+.hero-bg-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.hero-content{max-width:820px;position:relative;z-index:2;}
+.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.65rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;}
+.hero-badge::before{content:'';display:block;width:28px;height:1px;background:var(--gold);}
+.hero-title{font-family:'Cormorant Garant',serif;font-size:clamp(3rem,7vw,5.8rem);font-weight:500;line-height:1.03;color:var(--white);margin-bottom:1.75rem;}
+.hero-title em{font-style:italic;color:var(--gold-light);}
+.hero-sub{font-size:1rem;font-weight:400;line-height:1.82;color:rgba(253,250,245,0.78);max-width:580px;margin-bottom:1.25rem;}
+.hero-sub2{font-size:0.88rem;font-weight:400;line-height:1.75;color:rgba(253,250,245,0.55);max-width:560px;margin-bottom:3rem;}
+.hero-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:4rem;}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--navy);text-decoration:none;font-size:0.76rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:1rem 2.2rem;border-radius:2px;transition:background 0.2s,transform 0.2s;}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-1px);}
+.btn-secondary{display:inline-flex;align-items:center;gap:0.5rem;color:rgba(253,250,245,0.65);text-decoration:none;font-size:0.76rem;transition:color 0.2s;}
+.btn-secondary:hover{color:var(--gold);}
+.hero-prop{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(196,152,74,0.18);padding-top:2.5rem;max-width:560px;}
+.prop-item{padding-right:1.5rem;}
+.prop-item+.prop-item{border-left:1px solid rgba(196,152,74,0.18);padding-left:1.5rem;padding-right:0;}
+.prop-num{font-family:'Cormorant Garant',serif;font-size:2rem;font-weight:500;color:var(--gold-light);display:block;line-height:1;}
+.prop-label{font-size:0.62rem;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:rgba(253,250,245,0.5);margin-top:0.3rem;display:block;}
+
+/* SHARED */
+section{padding:6rem 5vw;}
+.section-label{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.63rem;font-weight:400;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;}
+.section-label::before{content:'';width:20px;height:1px;background:var(--gold);display:block;}
+.section-title{font-family:'Cormorant Garant',serif;font-size:clamp(1.9rem,4vw,2.9rem);font-weight:500;line-height:1.12;color:var(--text-dark);margin-bottom:1rem;}
+.section-intro{font-size:0.92rem;font-weight:400;line-height:1.82;color:var(--text-mid);max-width:580px;margin-bottom:3.5rem;}
+.gold-div{width:40px;height:1px;background:var(--gold);margin:1.5rem 0 2.5rem;}
+
+/* SERVICES */
+#services{background:var(--cream);}
+.svc-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2.75rem;}
+.svc-header .section-intro{margin-bottom:0;}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:rgba(10,22,40,0.07);}
+.svc-card{background:var(--cream);padding:2.75rem 2.25rem;transition:background 0.3s;}
+.svc-card:hover{background:var(--white);}
+.svc-num{font-family:'Cormorant Garant',serif;font-size:0.82rem;color:var(--gold);font-weight:400;letter-spacing:0.12em;display:block;margin-bottom:1.5rem;}
+.svc-icon{width:36px;height:36px;margin-bottom:1.25rem;color:var(--navy);opacity:0.6;}
+.svc-title{font-family:'Cormorant Garant',serif;font-size:1.4rem;font-weight:500;color:var(--navy);margin-bottom:0.85rem;line-height:1.2;}
+.svc-desc{font-size:0.85rem;font-weight:400;line-height:1.82;color:var(--text-mid);margin-bottom:1.25rem;}
+.svc-inc-title{font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.6rem;font-weight:400;}
+.svc-inc ul{list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1.5rem;}
+.svc-inc li{font-size:0.82rem;font-weight:400;color:var(--text-mid);display:flex;align-items:flex-start;gap:0.55rem;line-height:1.55;}
+.svc-inc li::before{content:'—';color:var(--gold);font-size:0.72rem;flex-shrink:0;margin-top:1px;}
+.svc-tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.tag{font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.22rem 0.55rem;border:1px solid var(--border);color:var(--gold);border-radius:1px;background:rgba(196,152,74,0.05);}
+.svc-wide{grid-column:1/-1;background:var(--navy)!important;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;padding:2.75rem 2.25rem;}
+.svc-wide:hover{background:var(--navy)!important;}
+.svc-wide .svc-title{color:var(--white);}
+.svc-wide .svc-desc{color:rgba(253,250,245,0.72);}
+.svc-wide .svc-inc-title{color:rgba(253,250,245,0.4);}
+.svc-wide .svc-inc li{color:rgba(253,250,245,0.72);}
+.svc-wide .svc-num{color:var(--gold-light);}
+.svc-wide .svc-icon{color:var(--gold-light);}
+.svc-wide .tag{border-color:rgba(196,152,74,0.3);color:var(--gold-light);background:rgba(196,152,74,0.07);}
+@media(max-width:820px){.svc-grid{grid-template-columns:1fr;}.svc-wide{grid-template-columns:1fr;gap:1.5rem;}}
+
+/* PROCESS */
+#process{background:var(--navy);}
+#process .section-title{color:var(--white);}
+#process .section-intro{color:rgba(253,250,245,0.7);}
+.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);}
+.proc-step{padding:2.25rem 1.75rem;border-top:1px solid rgba(196,152,74,0.2);}
+.proc-step+.proc-step{border-left:1px solid rgba(196,152,74,0.1);}
+.step-num{font-family:'Cormorant Garant',serif;font-size:3.5rem;font-weight:400;color:rgba(196,152,74,0.45);line-height:1;display:block;margin-bottom:1rem;}
+.step-title{font-family:'Cormorant Garant',serif;font-size:1.08rem;font-weight:500;color:var(--gold-light);margin-bottom:0.55rem;}
+.step-desc{font-size:0.83rem;font-weight:400;line-height:1.75;color:rgba(253,250,245,0.72);}
+.step-note{margin-top:0.85rem;font-size:0.75rem;font-weight:400;color:rgba(253,250,245,0.4);line-height:1.6;font-style:italic;}
+@media(max-width:760px){.proc-steps{grid-template-columns:1fr 1fr;}}
+
+/* SECTORS */
+#sectors{background:var(--white);}
+.sec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(10,22,40,0.06);}
+.sec-item{background:var(--white);padding:2.25rem 1.75rem;transition:background 0.25s;}
+.sec-item:hover{background:var(--cream);}
+.sec-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);margin-bottom:1rem;}
+.sec-name{font-family:'Cormorant Garant',serif;font-size:1.18rem;font-weight:500;color:var(--navy);margin-bottom:0.5rem;}
+.sec-detail{font-size:0.82rem;font-weight:400;line-height:1.72;color:var(--text-muted);}
+@media(max-width:600px){.sec-grid{grid-template-columns:1fr;}}
+
+/* REFERENCES */
+#references{background:var(--navy);padding:5rem 5vw;}
+
+/* ABOUT */
+#about{background:var(--white);display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;}
+.about-body{font-size:0.9rem;font-weight:400;line-height:1.88;color:var(--text-mid);margin-bottom:1rem;}
+.about-hl{margin-top:2.5rem;display:flex;flex-direction:column;gap:1.1rem;}
+.hl-item{display:flex;gap:1rem;align-items:flex-start;}
+.hl-line{width:2px;min-height:38px;background:var(--gold);flex-shrink:0;margin-top:4px;}
+.hl-text{font-size:0.85rem;font-weight:400;line-height:1.65;color:var(--text-mid);}
+.hl-text strong{font-weight:500;color:var(--navy);display:block;font-size:0.9rem;margin-bottom:0.2rem;}
+.about-vis{background:var(--navy);padding:3rem 2.5rem;}
+.corr{display:flex;align-items:center;margin-bottom:1.5rem;}
+.corr-c1{font-family:'Cormorant Garant',serif;font-size:1.02rem;font-weight:500;color:var(--white);min-width:82px;}
+.corr-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(196,152,74,0.7),rgba(196,152,74,0.12));position:relative;margin:0 1rem;}
+.corr-line::after{content:'↔';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:var(--gold);font-size:0.65rem;background:var(--navy);padding:0 0.3rem;}
+.corr-c2{font-family:'Cormorant Garant',serif;font-size:1.02rem;font-weight:500;color:var(--gold-light);min-width:82px;text-align:right;}
+@media(max-width:900px){#about{grid-template-columns:1fr;}.about-vis{display:none;}}
+
+/* BLOG */
+#blog{background:var(--cream);}
+.blog-grid{display:grid;grid-template-columns:2fr 1fr;gap:2px;background:rgba(10,22,40,0.06);margin-bottom:2rem;}
+.blog-feat{background:var(--white);overflow:hidden;cursor:pointer;transition:background 0.2s;}
+.blog-feat:hover{background:var(--cream);}
+.blog-feat-img{height:220px;background:var(--navy);display:flex;align-items:flex-end;padding:2rem;position:relative;overflow:hidden;}
+.blog-feat-img svg{position:absolute;inset:0;width:100%;height:100%;opacity:0.07;}
+.blog-feat-img-content{position:relative;z-index:2;}
+.blog-feat-body{padding:2rem;}
+.blog-sidebar{display:flex;flex-direction:column;gap:2px;}
+.blog-card{background:var(--white);padding:1.75rem;cursor:pointer;transition:background 0.2s;flex:1;}
+.blog-card:hover{background:var(--cream);}
+.blog-cat{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.4rem;}
+.blog-cat::before{content:'';width:5px;height:5px;background:var(--gold);border-radius:50%;display:block;flex-shrink:0;}
+.blog-title-card{font-family:'Cormorant Garant',serif;font-size:1.12rem;font-weight:500;color:var(--navy);line-height:1.3;margin-bottom:0.5rem;}
+.blog-feat .blog-title-card{font-size:1.45rem;color:var(--white);}
+.blog-excerpt{font-size:0.82rem;font-weight:400;color:var(--text-muted);line-height:1.72;margin-bottom:1rem;}
+.blog-meta{font-size:0.7rem;color:var(--text-muted);display:flex;gap:1rem;margin-bottom:0.75rem;}
+.blog-more{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:0.35rem;transition:gap 0.2s;}
+.blog-more:hover{gap:0.6rem;}
+.li-strip{background:rgba(196,152,74,0.07);border:1px solid var(--border);padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.li-strip p{font-size:0.85rem;font-weight:400;color:var(--text-mid);}
+.li-link-btn{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--border);padding:0.5rem 1rem;border-radius:2px;transition:background 0.2s;flex-shrink:0;}
+.li-link-btn:hover{background:rgba(196,152,74,0.08);}
+@media(max-width:820px){.blog-grid{grid-template-columns:1fr;}}
+
+/* PRICING */
+#pricing{background:var(--navy);}
+#pricing .section-title{color:var(--white);}
+#pricing .section-intro{color:rgba(253,250,245,0.72);}
+.pricing-note{font-size:0.76rem;font-weight:400;color:rgba(253,250,245,0.4);font-style:italic;margin-bottom:3rem;display:flex;align-items:center;gap:0.5rem;}
+.pricing-note::before{content:'';width:16px;height:1px;background:rgba(253,250,245,0.2);display:block;flex-shrink:0;}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,0.06);margin-bottom:2rem;}
+.pricing-card{background:var(--navy-mid);padding:2.5rem 2rem;transition:background 0.2s;}
+.pricing-card:hover{background:#162848;}
+.pricing-card.featured{background:#162848;border-top:2px solid var(--gold);}
+.pricing-badge{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--navy);background:var(--gold);padding:0.2rem 0.6rem;border-radius:1px;display:inline-block;margin-bottom:1.25rem;}
+.pricing-type{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;font-weight:400;}
+.pricing-name{font-family:'Cormorant Garant',serif;font-size:1.4rem;font-weight:500;color:var(--white);margin-bottom:0.5rem;}
+.pricing-price{font-family:'Cormorant Garant',serif;font-size:2.8rem;font-weight:500;color:var(--gold-light);line-height:1;margin-bottom:0.3rem;}
+.pricing-price span{font-size:1rem;font-weight:300;color:rgba(253,250,245,0.4);margin-left:0.25rem;}
+.pricing-desc{font-size:0.82rem;font-weight:400;color:rgba(253,250,245,0.6);line-height:1.72;margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,0.07);}
+.pricing-includes{list-style:none;display:flex;flex-direction:column;gap:0.55rem;margin-bottom:2rem;}
+.pricing-includes li{font-size:0.82rem;font-weight:400;color:rgba(253,250,245,0.7);display:flex;align-items:flex-start;gap:0.6rem;line-height:1.5;}
+.pricing-includes li::before{content:'✓';color:var(--gold);font-size:0.7rem;flex-shrink:0;margin-top:2px;}
+.pricing-cta{display:block;text-align:center;border:1px solid rgba(196,152,74,0.35);color:var(--gold);text-decoration:none;font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:0.75rem;border-radius:2px;transition:background 0.2s,color 0.2s;}
+.pricing-cta:hover{background:var(--gold);color:var(--navy);}
+.pricing-card.featured .pricing-cta{background:var(--gold);color:var(--navy);border-color:var(--gold);}
+.pricing-footer{text-align:center;font-size:0.8rem;font-weight:400;color:rgba(253,250,245,0.4);padding:1.5rem;border:1px solid rgba(255,255,255,0.06);border-top:none;}
+@media(max-width:820px){.pricing-grid{grid-template-columns:1fr;}}
+
+/* FAQ */
+#faq{background:var(--cream);}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(10,22,40,0.06);}
+.faq-item{background:var(--cream);padding:2rem;cursor:pointer;transition:background 0.2s;}
+.faq-item:hover,.faq-item.open{background:var(--white);}
+.faq-q{font-family:'Cormorant Garant',serif;font-size:1.08rem;font-weight:500;color:var(--navy);display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;line-height:1.3;}
+.faq-icon{color:var(--gold);font-size:1.2rem;flex-shrink:0;transition:transform 0.25s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+.faq-a{font-size:0.85rem;font-weight:400;line-height:1.8;color:var(--text-mid);margin-top:1rem;display:none;}
+.faq-item.open .faq-a{display:block;}
+@media(max-width:820px){.faq-grid{grid-template-columns:1fr;}}
+
+/* CONTACT */
+#contact{background:var(--navy);}
+#contact .section-title{color:var(--white);}
+#contact .section-intro{color:rgba(253,250,245,0.7);}
+.cnt-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:5vw;align-items:start;}
+.cnt-info{display:flex;flex-direction:column;gap:2rem;}
+.cnt-lbl{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.35rem;font-weight:400;}
+.cnt-val{font-size:0.92rem;font-weight:400;color:rgba(253,250,245,0.82);line-height:1.6;}
+.cnt-form{display:flex;flex-direction:column;gap:1rem;}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.f-grp{display:flex;flex-direction:column;gap:0.4rem;}
+.f-grp label{font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(253,250,245,0.45);font-weight:400;}
+.f-grp input,.f-grp select,.f-grp textarea{background:rgba(255,255,255,0.07);border:1px solid rgba(196,152,74,0.25);color:var(--white);padding:0.8rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:400;outline:none;border-radius:2px;transition:border-color 0.2s,background 0.2s;width:100%;}
+.f-grp input::placeholder,.f-grp textarea::placeholder{color:rgba(253,250,245,0.25);}
+.f-grp input:focus,.f-grp select:focus,.f-grp textarea:focus{border-color:var(--gold);background:rgba(255,255,255,0.1);}
+.f-grp select option{background:var(--navy);}
+.f-grp textarea{resize:vertical;min-height:110px;}
+.f-submit{background:var(--gold);color:var(--navy);border:none;padding:1rem 2.2rem;font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;border-radius:2px;align-self:flex-start;transition:background 0.2s,transform 0.2s;}
+.f-submit:hover{background:var(--gold-light);transform:translateY(-1px);}
+@media(max-width:820px){.cnt-grid{grid-template-columns:1fr;}.f-row{grid-template-columns:1fr;}}
+
+/* FOOTER */
+footer{background:#060F1B;padding:3rem 5vw 2rem;border-top:1px solid rgba(196,152,74,0.12);}
+.ft-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2.5rem;gap:2rem;flex-wrap:wrap;}
+.ft-logo span:first-child{font-family:'Cormorant Garant',serif;font-size:1.35rem;font-weight:500;color:var(--white);display:block;letter-spacing:0.04em;}
+.ft-logo span:last-child{font-size:0.58rem;font-weight:300;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-top:2px;}
+.ft-tag{font-size:0.78rem;font-weight:400;color:rgba(253,250,245,0.35);margin-top:0.75rem;max-width:240px;line-height:1.65;}
+.ft-links{display:flex;gap:3.5rem;}
+.ft-col h5{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1rem;}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem;}
+.ft-col a{font-size:0.78rem;font-weight:400;color:rgba(253,250,245,0.42);text-decoration:none;transition:color 0.2s;}
+.ft-col a:hover{color:var(--gold-light);}
+.ft-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;border-top:1px solid rgba(253,250,245,0.06);flex-wrap:wrap;gap:1rem;}
+.ft-copy{font-size:0.7rem;color:rgba(253,250,245,0.22);}
+.ft-li{display:flex;gap:2rem;}
+.ft-li a{font-size:0.7rem;color:rgba(253,250,245,0.22);text-decoration:none;transition:color 0.2s;}
+.ft-li a:hover{color:rgba(253,250,245,0.5);}
+@media(max-width:700px){.ft-links{flex-direction:column;gap:2rem;}}
+
+/* COOKIE */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:rgba(10,22,40,0.98);border-top:1px solid rgba(196,152,74,0.2);padding:1.25rem 5vw;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;backdrop-filter:blur(12px);}
+.cookie-text{font-size:0.78rem;color:rgba(253,250,245,0.6);line-height:1.6;max-width:680px;}
+.cookie-text a{color:var(--gold);text-decoration:none;}
+.cookie-btns{display:flex;gap:0.75rem;flex-shrink:0;}
+.cookie-accept{background:var(--gold);color:var(--navy);border:none;padding:0.55rem 1.25rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;}
+.cookie-decline{background:transparent;color:rgba(253,250,245,0.4);border:1px solid rgba(253,250,245,0.15);padding:0.55rem 1.25rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;cursor:pointer;border-radius:2px;}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.fu{animation:fadeUp 0.7s ease forwards;opacity:0;}
+.d1{animation-delay:0.1s;}.d2{animation-delay:0.28s;}.d3{animation-delay:0.45s;}.d4{animation-delay:0.62s;}
+</style>
+</head>
+<body>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookie-banner">
+  <p class="cookie-text" id="cookie-text-p">We use cookies to improve your experience. By continuing, you agree to our <a href="#">Privacy Policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-accept" id="cookie-accept-btn" onclick="closeCookie()">Accept</button>
+    <button class="cookie-decline" id="cookie-decline-btn" onclick="closeCookie()">Decline</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" rx="2" fill="rgba(196,152,74,0.12)"/>
+      <path d="M6 24 Q8 13 16 9 Q24 13 26 24" stroke="#C4984A" stroke-width="1.3" fill="none"/>
+      <path d="M10 24 Q11 17 16 14 Q21 17 22 24" stroke="#D4AD6A" stroke-width="1" fill="none"/>
+      <line x1="5" y1="24" x2="27" y2="24" stroke="#C4984A" stroke-width="1.3"/>
+      <circle cx="16" cy="9" r="1.5" fill="#C4984A"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span>Golden Horn Advisory</span>
+      <span id="k-nav-sub">Turkey–Europe Trade Consultancy</span>
+    </div>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#services" id="k-nav-svc">Services</a></li>
+      <li><a href="#sectors" id="k-nav-sec">Sectors</a></li>
+      <li><a href="#about" id="k-nav-about">About</a></li>
+      <li><a href="#blog" id="k-nav-blog">Insights</a></li>
+      <li><a href="#contact" class="nav-cta" id="k-nav-cta">Get in Touch</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="btn-tr" onclick="setLang('tr')">TR</button>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <svg class="hero-bg-svg" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="200" x2="1400" y2="200" stroke="rgba(196,152,74,0.05)" stroke-width="1"/>
+    <line x1="0" y1="450" x2="1400" y2="450" stroke="rgba(196,152,74,0.05)" stroke-width="1"/>
+    <line x1="0" y1="700" x2="1400" y2="700" stroke="rgba(196,152,74,0.05)" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="900" stroke="rgba(196,152,74,0.04)" stroke-width="1"/>
+    <line x1="700" y1="0" x2="700" y2="900" stroke="rgba(196,152,74,0.04)" stroke-width="1"/>
+    <line x1="1100" y1="0" x2="1100" y2="900" stroke="rgba(196,152,74,0.04)" stroke-width="1"/>
+    <circle cx="700" cy="450" r="300" stroke="rgba(196,152,74,0.04)" stroke-width="1" fill="none"/>
+    <circle cx="700" cy="450" r="190" stroke="rgba(196,152,74,0.03)" stroke-width="1" fill="none"/>
+  </svg>
+  <div class="hero-content">
+    <div class="hero-badge fu d1" id="k-hero-badge">Turkey · Europe Trade Advisory</div>
+    <h1 class="hero-title fu d2" id="k-hero-title">Bridging <em>Türkiye</em><br>and Europe.</h1>
+    <p class="hero-sub fu d3" id="k-hero-sub">We help SMEs navigate the Turkey–Europe trade corridor — from market entry strategy to supplier sourcing and trade intelligence.</p>
+    <p class="hero-sub2 fu d3" id="k-hero-sub2">Practical, intelligence-led advisory for companies that need results fast, without the overhead of a global consultancy.</p>
+    <div class="hero-actions fu d4">
+      <a href="#contact" class="btn-primary" id="k-hero-cta1">Request a Consultation</a>
+      <a href="#services" class="btn-secondary" id="k-hero-cta2">Explore Our Services →</a>
+    </div>
+    <div class="hero-prop fu d4">
+      <div class="prop-item"><span class="prop-num">3</span><span class="prop-label" id="k-prop1">Core Sectors</span></div>
+      <div class="prop-item"><span class="prop-num">2</span><span class="prop-label" id="k-prop2">Markets Covered</span></div>
+      <div class="prop-item"><span class="prop-num">SME</span><span class="prop-label" id="k-prop3">Focused Pricing</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="svc-header">
+    <div>
+      <div class="section-label" id="k-svc-label">What We Do</div>
+      <h2 class="section-title" id="k-svc-title">Advisory Services</h2>
+    </div>
+    <p class="section-intro" id="k-svc-intro">Practical, intelligence-led guidance for businesses expanding between Turkey and European markets — without the consultancy overhead.</p>
+  </div>
+  <div class="svc-grid">
+
+    <div class="svc-card">
+      <span class="svc-num">01</span>
+      <svg class="svc-icon" viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="19" cy="19" r="15"/><path d="M19 4 Q24 12 24 19 Q24 26 19 34 Q14 26 14 19 Q14 12 19 4Z"/><line x1="4" y1="19" x2="34" y2="19"/><ellipse cx="19" cy="19" rx="15" ry="6"/></svg>
+      <h3 class="svc-title" id="k-s1-title">Market Entry Strategy</h3>
+      <p class="svc-desc" id="k-s1-desc">Full-spectrum entry planning for European companies entering Turkey, or Turkish exporters targeting the EU and UK — from regulatory mapping to channel strategy.</p>
+      <div class="svc-inc"><div class="svc-inc-title" id="k-inc">Includes</div>
+        <ul id="k-s1-list">
+          <li>Market sizing &amp; opportunity assessment</li>
+          <li>Regulatory and compliance mapping</li>
+          <li>Competitive landscape analysis</li>
+          <li>Channel &amp; distribution strategy</li>
+          <li>Go-to-market timeline and budget</li>
+        </ul>
+      </div>
+      <div class="svc-tags"><span class="tag">Feasibility</span><span class="tag">Regulatory</span><span class="tag">Go-to-Market</span></div>
+    </div>
+
+    <div class="svc-card">
+      <span class="svc-num">02</span>
+      <svg class="svc-icon" viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="5" y="7" width="28" height="24" rx="1"/><line x1="5" y1="14" x2="33" y2="14"/><rect x="10" y="19" width="5" height="4" rx="0.5"/><rect x="17" y="19" width="11" height="4" rx="0.5"/><rect x="10" y="25" width="8" height="2" rx="0.5"/><rect x="20" y="25" width="8" height="2" rx="0.5"/></svg>
+      <h3 class="svc-title" id="k-s2-title">Trade Intelligence Reports</h3>
+      <p class="svc-desc" id="k-s2-desc">Sector-specific research reports on sourcing, pricing, regulations, and competitive dynamics — built for decision-makers who need to move fast with the right data.</p>
+      <div class="svc-inc"><div class="svc-inc-title" id="k-inc2">Includes</div>
+        <ul id="k-s2-list">
+          <li>Pricing benchmarks and margin analysis</li>
+          <li>Key supplier and buyer landscape</li>
+          <li>Import/export flow data</li>
+          <li>Tariff and customs duty overview</li>
+          <li>Executive summary + full report</li>
+        </ul>
+      </div>
+      <div class="svc-tags"><span class="tag">Sector Reports</span><span class="tag">Pricing Intel</span><span class="tag">Compliance</span></div>
+    </div>
+
+    <div class="svc-card">
+      <span class="svc-num">03</span>
+      <svg class="svc-icon" viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="13" cy="14" r="8"/><circle cx="26" cy="24" r="8"/><path d="M19 10 Q28 10 30 14"/><path d="M8 24 Q10 28 18 28"/></svg>
+      <h3 class="svc-title" id="k-s3-title">Partner &amp; Supplier Sourcing</h3>
+      <p class="svc-desc" id="k-s3-desc">Identification, vetting, and warm introduction of manufacturers, distributors, and trade partners on both sides of the corridor.</p>
+      <div class="svc-inc"><div class="svc-inc-title" id="k-inc3">Includes</div>
+        <ul id="k-s3-list">
+          <li>Longlist of vetted candidates</li>
+          <li>Background and capability checks</li>
+          <li>Shortlist with comparison matrix</li>
+          <li>Reference verification</li>
+          <li>Warm introductions to selected partners</li>
+        </ul>
+      </div>
+      <div class="svc-tags"><span class="tag">Vetting</span><span class="tag">Due Diligence</span><span class="tag">Introductions</span></div>
+    </div>
+
+    <div class="svc-card">
+      <span class="svc-num">04</span>
+      <svg class="svc-icon" viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M7 30 L7 18 L14 18 L14 30"/><path d="M15 30 L15 10 L22 10 L22 30"/><path d="M23 30 L23 20 L30 20 L30 30"/><line x1="4" y1="30" x2="34" y2="30"/><path d="M7 18 L14 10 L22 18 L30 10" stroke-dasharray="2 2"/></svg>
+      <h3 class="svc-title" id="k-s4-title">Pricing &amp; Trade Flow Analysis</h3>
+      <p class="svc-desc" id="k-s4-desc">Data-driven analysis of trade volumes, pricing benchmarks, tariff implications, and margin structures — the numbers you need before committing.</p>
+      <div class="svc-inc"><div class="svc-inc-title" id="k-inc4">Includes</div>
+        <ul id="k-s4-list">
+          <li>HS code classification guidance</li>
+          <li>Turkey–EU tariff rate analysis</li>
+          <li>Landed cost modelling</li>
+          <li>Volume and trend data by category</li>
+          <li>Margin benchmarks by channel</li>
+        </ul>
+      </div>
+      <div class="svc-tags"><span class="tag">HS Codes</span><span class="tag">Tariffs</span><span class="tag">Benchmarking</span></div>
+    </div>
+
+    <div class="svc-card svc-wide">
+      <div>
+        <span class="svc-num">05</span>
+        <svg class="svc-icon" viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="5" y="10" width="28" height="18" rx="1"/><path d="M12 10 L12 28"/><path d="M26 10 L26 28"/><path d="M5 19 L33 19"/><circle cx="19" cy="10" r="2.5"/><circle cx="19" cy="28" r="2.5"/></svg>
+        <h3 class="svc-title" id="k-s5-title">Customs Union &amp; Compliance Advisory</h3>
+        <p class="svc-desc" id="k-s5-desc">Practical guidance on navigating the EU-Turkey Customs Union, UK trade regulations post-Brexit, rules of origin, and documentation requirements — so shipments don't get stuck.</p>
+        <div class="svc-tags" style="margin-top:1.5rem;"><span class="tag">Customs Union</span><span class="tag">Rules of Origin</span><span class="tag">UK Trade</span><span class="tag">Documentation</span></div>
+      </div>
+      <div style="padding-top:0.5rem;">
+        <div class="svc-inc"><div class="svc-inc-title" id="k-inc5">Includes</div>
+          <ul id="k-s5-list">
+            <li>EU-Turkey Customs Union scope review</li>
+            <li>UK DCTS and TCA implications</li>
+            <li>A.TR and EUR.1 movement certificate guidance</li>
+            <li>Import/export documentation checklist</li>
+            <li>Risk flagging for non-compliant shipments</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-label" id="k-proc-label">How We Work</div>
+  <h2 class="section-title" id="k-proc-title">From Brief to Results</h2>
+  <p class="section-intro" id="k-proc-intro">Fast turnaround. Fixed, SME-friendly pricing. No retainer until we've proven value.</p>
+  <div class="proc-steps">
+    <div class="proc-step">
+      <span class="step-num">01</span>
+      <div class="step-title" id="k-p1-title">Discovery Call</div>
+      <p class="step-desc" id="k-p1-desc">Free 30-minute scoping session to understand your market, sector, objectives and timeline.</p>
+      <p class="step-note" id="k-p1-note">No commitment required. We'll tell you upfront if we're not the right fit.</p>
+    </div>
+    <div class="proc-step">
+      <span class="step-num">02</span>
+      <div class="step-title" id="k-p2-title">Proposal &amp; Scope</div>
+      <p class="step-desc" id="k-p2-desc">Tailored proposal with fixed deliverables, transparent pricing, and a clear timeline. No surprises.</p>
+      <p class="step-note" id="k-p2-note">Delivered within 48 hours of the discovery call.</p>
+    </div>
+    <div class="proc-step">
+      <span class="step-num">03</span>
+      <div class="step-title" id="k-p3-title">Research &amp; Analysis</div>
+      <p class="step-desc" id="k-p3-desc">Deep-dive research combining local on-the-ground intelligence, trade data, and primary source verification.</p>
+      <p class="step-note" id="k-p3-note">Typical turnaround: 5–12 business days depending on scope.</p>
+    </div>
+    <div class="proc-step">
+      <span class="step-num">04</span>
+      <div class="step-title" id="k-p4-title">Delivery &amp; Debrief</div>
+      <p class="step-desc" id="k-p4-desc">Written report with executive summary, plus a live debrief call to walk through findings.</p>
+      <p class="step-note" id="k-p4-note">Includes 2 weeks of follow-up support after delivery.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section id="sectors">
+  <div class="section-label" id="k-sec-label">Areas of Focus</div>
+  <h2 class="section-title" id="k-sec-title">Three Core Sectors</h2>
+  <p class="section-intro" id="k-sec-intro">We concentrate expertise where Turkey holds genuine competitive advantage in European trade.</p>
+  <div class="sec-grid">
+    <div class="sec-item"><div class="sec-dot"></div><div class="sec-name" id="k-sec1-name">Textiles &amp; Apparel</div><p class="sec-detail" id="k-sec1-detail">Sourcing strategy, supplier qualification, lead-time benchmarking, and fast-fashion vs. premium positioning for European buyers.</p></div>
+    <div class="sec-item"><div class="sec-dot"></div><div class="sec-name" id="k-sec2-name">Food &amp; Agriculture</div><p class="sec-detail" id="k-sec2-detail">Export compliance, EU food safety regulations, private-label opportunity mapping, and channel analysis across key European markets.</p></div>
+    <div class="sec-item"><div class="sec-dot"></div><div class="sec-name" id="k-sec3-name">Building Materials</div><p class="sec-detail" id="k-sec3-detail">Tile, marble, ceramic, and steel trade flows. CE marking requirements, import duties, and contractor channel access in Germany, UK, France and Netherlands.</p></div>
+    <div class="sec-item"><div class="sec-dot"></div><div class="sec-name" id="k-sec4-name">UK Market Access</div><p class="sec-detail" id="k-sec4-detail">Post-Brexit UK trade dynamics for Turkish exporters. TCA implications, GB customs procedures, and distribution landscape across key UK retail and wholesale channels.</p></div>
+    <div class="sec-item"><div class="sec-dot"></div><div class="sec-name" id="k-sec5-name">European Buyers in Turkey</div><p class="sec-detail" id="k-sec5-detail">Entry playbooks for European SMEs opening sourcing operations in Turkey — legal entity setup, partner selection, and cost structure guidance.</p></div>
+    <div class="sec-item"><div class="sec-dot"></div><div class="sec-name" id="k-sec6-name">Customs &amp; Compliance</div><p class="sec-detail" id="k-sec6-detail">HS code advisory, rules of origin under the EU-Turkey Customs Union, A.TR and EUR.1 documentation, and compliance checklists for first-time exporters.</p></div>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<section id="references" style="background:var(--navy);padding:5rem 5vw;">
+  <div style="max-width:720px;margin:0 auto;text-align:center;">
+    <div class="section-label" style="justify-content:center;" id="k-ref-label">References</div>
+    <h2 class="section-title" style="color:var(--white);text-align:center;" id="k-ref-title">Built on Trust</h2>
+    <div style="width:40px;height:1px;background:var(--gold);margin:1.5rem auto 2.5rem;"></div>
+    <p style="font-size:1.05rem;font-family:'Cormorant Garant',serif;font-style:italic;color:rgba(253,250,245,0.72);line-height:1.75;margin-bottom:2.5rem;" id="k-ref-body">We are a new firm and believe in letting our work speak for itself. Client references are available on request — we are happy to connect prospective clients with contacts who can speak to the quality of our research and advisory.</p>
+    <a href="#contact" id="k-ref-cta" style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(196,152,74,0.4);color:var(--gold);text-decoration:none;font-size:0.76rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:0.85rem 1.75rem;border-radius:2px;transition:background 0.2s,color 0.2s;">Request References →</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-text">
+    <div class="section-label" id="k-about-label">About</div>
+    <h2 class="section-title" id="k-about-title">Built at the Intersection of Two Markets</h2>
+    <div class="gold-div"></div>
+    <p class="about-body" id="k-about-b1">Golden Horn Advisory was founded to solve a specific problem: SMEs expanding between Turkey and Europe often cannot access the quality of market intelligence that larger firms take for granted, at a price point that makes sense for them.</p>
+    <p class="about-body" id="k-about-b2">We combine deep local Istanbul knowledge, an understanding of European business culture, and a rigorous research methodology to deliver intelligence that is actually actionable — not generic reports padded to justify a large fee.</p>
+    <div class="about-hl">
+      <div class="hl-item"><div class="hl-line"></div><div class="hl-text"><strong id="k-hl1-t">SME-First Pricing</strong><span id="k-hl1-b">Fixed-fee engagements designed for companies with real budgets, not McKinsey budgets.</span></div></div>
+      <div class="hl-item"><div class="hl-line"></div><div class="hl-text"><strong id="k-hl2-t">Sector Depth</strong><span id="k-hl2-b">We do not advise on everything. We know textiles, food, and building materials deeply.</span></div></div>
+      <div class="hl-item"><div class="hl-line"></div><div class="hl-text"><strong id="k-hl3-t">Bidirectional Expertise</strong><span id="k-hl3-b">Equal focus on Turkish exporters going to Europe and European buyers sourcing from Turkey.</span></div></div>
+    </div>
+  </div>
+  <div class="about-vis">
+    <p style="font-family:'Cormorant Garant',serif;font-size:0.8rem;color:rgba(253,250,245,0.32);letter-spacing:0.22em;text-transform:uppercase;margin-bottom:2.5rem;" id="k-corridors">Active Corridors</p>
+    <div class="corr"><span class="corr-c1">Istanbul</span><div class="corr-line"></div><span class="corr-c2">London</span></div>
+    <div class="corr"><span class="corr-c1">Istanbul</span><div class="corr-line"></div><span class="corr-c2">Berlin</span></div>
+    <div class="corr"><span class="corr-c1">Istanbul</span><div class="corr-line"></div><span class="corr-c2">Milan</span></div>
+    <div class="corr"><span class="corr-c1">Istanbul</span><div class="corr-line"></div><span class="corr-c2">Amsterdam</span></div>
+    <div class="corr"><span class="corr-c1">Istanbul</span><div class="corr-line"></div><span class="corr-c2">Warsaw</span></div>
+    <div style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(196,152,74,0.2);">
+      <p style="font-size:0.72rem;color:rgba(253,250,245,0.32);line-height:1.75;" id="k-trade-stat">Turkey–EU trade volume exceeded $200B in 2024. We help SMEs capture their share of that opportunity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-label" id="k-blog-label">Intelligence</div>
+  <h2 class="section-title" id="k-blog-title">Insights &amp; Reports</h2>
+  <p class="section-intro" id="k-blog-intro">Trade intelligence, market briefings, and sector analysis for SME decision-makers navigating the Turkey–Europe corridor.</p>
+  <div class="blog-grid">
+    <div class="blog-feat">
+      <div class="blog-feat-img">
+        <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="500" y2="220" stroke="rgba(196,152,74,1)" stroke-width="1"/><line x1="0" y1="55" x2="500" y2="55" stroke="rgba(196,152,74,1)" stroke-width="1"/><line x1="0" y1="110" x2="500" y2="110" stroke="rgba(196,152,74,1)" stroke-width="1"/><circle cx="150" cy="110" r="70" stroke="rgba(196,152,74,1)" stroke-width="1" fill="none"/><circle cx="350" cy="110" r="70" stroke="rgba(196,152,74,1)" stroke-width="1" fill="none"/></svg>
+        <div class="blog-feat-img-content">
+          <div class="blog-cat" style="color:var(--gold-light);" id="k-feat-cat">Featured Report · April 2026</div>
+          <div class="blog-title-card" id="k-feat-title">Sourcing Textiles from Turkey: A Strategic Guide for European Buyers 2026</div>
+        </div>
+      </div>
+      <div class="blog-feat-body">
+        <p class="blog-excerpt" id="k-feat-excerpt">A comprehensive guide covering supplier selection, pricing benchmarks, quality standards, lead times, and logistics for European brands sourcing garments and fabric from Turkey.</p>
+        <div class="blog-meta"><span id="k-feat-meta1">10 pages</span><span>Textiles &amp; Apparel</span><span id="k-feat-dl">Free download</span></div>
+        <a href="#contact" class="blog-more" id="k-feat-cta">Download Report →</a>
+      </div>
+    </div>
+    <div class="blog-sidebar">
+      <div class="blog-card"><div class="blog-cat" id="k-bc1-cat">Market Briefing</div><div class="blog-title-card" id="k-bc1-title">Post-Brexit UK Market Access for Turkish Exporters</div><div class="blog-meta" style="margin-top:0.6rem;"><span id="k-bc1-date">Coming Q2 2026</span></div></div>
+      <div class="blog-card"><div class="blog-cat" id="k-bc2-cat">Sector Overview</div><div class="blog-title-card" id="k-bc2-title">Turkish Tile &amp; Ceramic Exports: Pricing and Channel Analysis</div><div class="blog-meta" style="margin-top:0.6rem;"><span id="k-bc2-date">Coming Q3 2026</span></div></div>
+      <div class="blog-card"><div class="blog-cat" id="k-bc3-cat">Compliance Guide</div><div class="blog-title-card" id="k-bc3-title">EU Food Import Requirements for Turkish Agri Exporters</div><div class="blog-meta" style="margin-top:0.6rem;"><span id="k-bc3-date">Coming Q3 2026</span></div></div>
+    </div>
+  </div>
+  <div class="li-strip">
+    <p><strong id="k-li-strong">Stay informed.</strong> <span id="k-li-text">Follow Golden Horn Advisory on LinkedIn for weekly trade intelligence and market updates.</span></p>
+    <a href="https://linkedin.com/company/golden-horn-advisory" class="li-link-btn" target="_blank" id="k-li-btn">Follow on LinkedIn →</a>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-label" id="k-price-label">Pricing</div>
+  <h2 class="section-title" id="k-price-title">Simple, Transparent Pricing</h2>
+  <p class="section-intro" id="k-price-intro">Fixed fees. No hourly billing. No retainer until we've proven value.</p>
+  <p class="pricing-note" id="k-price-note">All prices in USD. Custom engagements available for larger or complex projects.</p>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="pricing-type" id="k-pt1">Entry Level</div>
+      <div class="pricing-name" id="k-pn1">Market Briefing</div>
+      <div class="pricing-price">$500<span id="k-pp1">/ report</span></div>
+      <p class="pricing-desc" id="k-pd1">A focused 8–12 page briefing on a specific market, sector, or regulatory question. Ideal for first-time buyers and exporters testing a new market.</p>
+      <ul class="pricing-includes" id="k-plist1">
+        <li id="k-pi1-1">Executive summary</li>
+        <li id="k-pi1-2">Key data points and benchmarks</li>
+        <li id="k-pi1-3">3–5 actionable recommendations</li>
+        <li id="k-pi1-4">30-min debrief call</li>
+      </ul>
+      <a href="#contact" class="pricing-cta" id="k-pcta1">Get Started →</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-badge" id="k-pbadge">Most Popular</div>
+      <div class="pricing-type" id="k-pt2">Core Service</div>
+      <div class="pricing-name" id="k-pn2">Full Market Entry Report</div>
+      <div class="pricing-price">$1,500<span id="k-pp2">/ project</span></div>
+      <p class="pricing-desc" id="k-pd2">Comprehensive 25–40 page market entry strategy covering regulatory, competitive, channel, and financial dimensions. Our flagship deliverable.</p>
+      <ul class="pricing-includes" id="k-plist2">
+        <li id="k-pi2-1">Full market sizing and opportunity map</li>
+        <li id="k-pi2-2">Regulatory and compliance roadmap</li>
+        <li id="k-pi2-3">Competitive landscape analysis</li>
+        <li id="k-pi2-4">Channel and pricing strategy</li>
+        <li id="k-pi2-5">Go-to-market timeline</li>
+        <li id="k-pi2-6">60-min debrief + 2 weeks follow-up</li>
+      </ul>
+      <a href="#contact" class="pricing-cta" id="k-pcta2">Get Started →</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-type" id="k-pt3">Ongoing</div>
+      <div class="pricing-name" id="k-pn3">Advisory Retainer</div>
+      <div class="pricing-price">$2,000<span id="k-pp3">/ month</span></div>
+      <p class="pricing-desc" id="k-pd3">Ongoing trade advisory for companies actively expanding. Dedicated support, monthly intelligence updates, and priority access to our research.</p>
+      <ul class="pricing-includes" id="k-plist3">
+        <li id="k-pi3-1">2 × monthly strategy calls</li>
+        <li id="k-pi3-2">Monthly trade intelligence update</li>
+        <li id="k-pi3-3">Unlimited email support</li>
+        <li id="k-pi3-4">Priority supplier introductions</li>
+        <li id="k-pi3-5">Quarterly market review</li>
+        <li id="k-pi3-6">Min. 3-month commitment</li>
+      </ul>
+      <a href="#contact" class="pricing-cta" id="k-pcta3">Get Started →</a>
+    </div>
+  </div>
+  <div class="pricing-footer" id="k-price-footer">All engagements begin with a free 30-minute discovery call. Supplier sourcing and pricing analysis also available as standalone projects from $800.</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-label" id="k-faq-label">FAQ</div>
+  <h2 class="section-title" id="k-faq-title">Common Questions</h2>
+  <p class="section-intro" id="k-faq-intro">Everything you need to know before working with us.</p>
+  <div class="faq-grid">
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q"><span id="k-fq1">Do I need to be based in Turkey or Europe to work with you?</span><span class="faq-icon">+</span></div>
+      <div class="faq-a" id="k-fa1">Not at all. We work with clients globally. What matters is that your business involves the Turkey–Europe trade corridor — whether you're sourcing, exporting, or entering a new market.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q"><span id="k-fq2">How long does a typical engagement take?</span><span class="faq-icon">+</span></div>
+      <div class="faq-a" id="k-fa2">Market briefings are delivered in 5–7 business days. Full market entry reports take 10–14 business days. Retainer engagements begin immediately from month one.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q"><span id="k-fq3">What sectors do you cover?</span><span class="faq-icon">+</span></div>
+      <div class="faq-a" id="k-fa3">We focus on three sectors: textiles &amp; apparel, food &amp; agriculture, and building materials. We also cover cross-cutting topics like customs &amp; compliance and UK market access.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q"><span id="k-fq4">How is payment handled?</span><span class="faq-icon">+</span></div>
+      <div class="faq-a" id="k-fa4">We invoice via bank transfer or Wise. For project-based work, 50% is due upfront and 50% on delivery. Retainer clients are billed monthly in advance. All prices in USD.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q"><span id="k-fq5">Can you help if I don't know which service I need?</span><span class="faq-icon">+</span></div>
+      <div class="faq-a" id="k-fa5">Absolutely. The free discovery call is specifically designed for this. We'll understand your situation and recommend the most suitable engagement — with no obligation.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q"><span id="k-fq6">Do you work with Turkish exporters as well as European buyers?</span><span class="faq-icon">+</span></div>
+      <div class="faq-a" id="k-fa6">Yes — this is a core part of our differentiation. We work equally with Turkish companies looking to enter European markets and European companies sourcing from Turkey. Both directions are our expertise.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q"><span id="k-fq7">What languages do you work in?</span><span class="faq-icon">+</span></div>
+      <div class="faq-a" id="k-fa7">English and Turkish. All reports are delivered in English as standard; Turkish versions available on request at no additional cost.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q"><span id="k-fq8">Are your reports confidential?</span><span class="faq-icon">+</span></div>
+      <div class="faq-a" id="k-fa8">Yes. All client work is strictly confidential. We do not share client information, company details, or report contents with any third party without explicit written consent.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label" id="k-cnt-label">Contact</div>
+  <h2 class="section-title" id="k-cnt-title">Start the Conversation</h2>
+  <p class="section-intro" id="k-cnt-intro">Book a free 30-minute discovery call or send us a project brief. We respond within 24 hours.</p>
+  <div class="cnt-grid">
+    <div class="cnt-info">
+      <div><div class="cnt-lbl" id="k-cl-email">Email</div><div class="cnt-val">info@goldenhornadvisory.com</div></div>
+      <div><div class="cnt-lbl" id="k-cl-loc">Based In</div><div class="cnt-val" id="k-cv-loc">Istanbul, Turkey</div></div>
+      <div><div class="cnt-lbl" id="k-cl-resp">Response Time</div><div class="cnt-val" id="k-cv-resp">Within 24 hours</div></div>
+      <div><div class="cnt-lbl" id="k-cl-lang">Languages</div><div class="cnt-val">English · Türkçe</div></div>
+      <div><div class="cnt-lbl" id="k-cl-call">Discovery Call</div><div class="cnt-val" id="k-cv-call">30 minutes · Free · No commitment</div></div>
+    </div>
+    <form class="cnt-form" onsubmit="handleSubmit(event)">
+      <div class="f-row">
+        <div class="f-grp"><label id="k-fl-fname">First Name</label><input type="text" id="k-fi-fname" placeholder="John"></div>
+        <div class="f-grp"><label id="k-fl-lname">Last Name</label><input type="text" id="k-fi-lname" placeholder="Smith"></div>
+      </div>
+      <div class="f-grp"><label id="k-fl-company">Company</label><input type="text" id="k-fi-company" placeholder="Your company name"></div>
+      <div class="f-grp"><label id="k-fl-email">Email</label><input type="email" id="k-fi-email" placeholder="john@company.com"></div>
+      <div class="f-grp">
+        <label id="k-fl-svc">Service Interest</label>
+        <select>
+          <option value="" disabled selected id="k-fopt0">Select a service</option>
+          <option id="k-fopt1">Market Entry Strategy</option>
+          <option id="k-fopt2">Trade Intelligence Report</option>
+          <option id="k-fopt3">Supplier / Partner Sourcing</option>
+          <option id="k-fopt4">Pricing &amp; Trade Flow Analysis</option>
+          <option id="k-fopt5">Customs &amp; Compliance Advisory</option>
+          <option id="k-fopt6">Other / Not Sure Yet</option>
+        </select>
+      </div>
+      <div class="f-grp"><label id="k-fl-brief">Project Brief</label><textarea id="k-fi-brief" placeholder="Tell us about your target market, sector, and what you need..."></textarea></div>
+      <button type="submit" class="f-submit" id="k-submit">Send Enquiry →</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-top">
+    <div>
+      <div class="ft-logo"><span>Golden Horn Advisory</span><span id="k-ft-sub">Turkey · Europe Trade Consultancy</span></div>
+      <p class="ft-tag" id="k-ft-tag">Strategic intelligence for SMEs navigating the Turkey–Europe corridor.</p>
+    </div>
+    <div class="ft-links">
+      <div class="ft-col">
+        <h5 id="k-ft-svc-h">Services</h5>
+        <ul>
+          <li><a href="#services" id="k-ft-svc1">Market Entry</a></li>
+          <li><a href="#services" id="k-ft-svc2">Trade Intelligence</a></li>
+          <li><a href="#services" id="k-ft-svc3">Supplier Sourcing</a></li>
+          <li><a href="#services" id="k-ft-svc4">Customs Advisory</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h5 id="k-ft-co-h">Company</h5>
+        <ul>
+          <li><a href="#about" id="k-ft-co1">About</a></li>
+          <li><a href="#sectors" id="k-ft-co2">Sectors</a></li>
+          <li><a href="#blog" id="k-ft-co3">Insights</a></li>
+          <li><a href="#contact" id="k-ft-co4">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <p class="ft-copy" id="k-ft-copy">© 2026 Golden Horn Advisory.</p>
+    <div class="ft-li">
+      <a href="#" id="k-ft-privacy">Privacy Policy</a>
+      <a href="https://linkedin.com/company/golden-horn-advisory" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ═══════════════════════════════════════════
+// TRANSLATION SYSTEM — 100% ID-based
+// Every translatable element has a unique id
+// ═══════════════════════════════════════════
+
+const T = {
+  en: {
+    'k-nav-sub':'Turkey–Europe Trade Consultancy',
+    'k-nav-svc':'Services','k-nav-sec':'Sectors','k-nav-about':'About','k-nav-blog':'Insights','k-nav-cta':'Get in Touch',
+    'k-hero-badge':'Turkey · Europe Trade Advisory',
+    'k-hero-title':'Bridging <em>Türkiye</em><br>and Europe.',
+    'k-hero-sub':'We help SMEs navigate the Turkey–Europe trade corridor — from market entry strategy to supplier sourcing and trade intelligence.',
+    'k-hero-sub2':'Practical, intelligence-led advisory for companies that need results fast, without the overhead of a global consultancy.',
+    'k-hero-cta1':'Request a Consultation','k-hero-cta2':'Explore Our Services →',
+    'k-prop1':'Core Sectors','k-prop2':'Markets Covered','k-prop3':'Focused Pricing',
+    'k-svc-label':'What We Do','k-svc-title':'Advisory Services',
+    'k-svc-intro':'Practical, intelligence-led guidance for businesses expanding between Turkey and European markets — without the consultancy overhead.',
+    'k-s1-title':'Market Entry Strategy',
+    'k-s1-desc':'Full-spectrum entry planning for European companies entering Turkey, or Turkish exporters targeting the EU and UK — from regulatory mapping to channel strategy.',
+    'k-inc':'Includes','k-inc2':'Includes','k-inc3':'Includes','k-inc4':'Includes','k-inc5':'Includes',
+    'k-s1-list':'<li>Market sizing &amp; opportunity assessment</li><li>Regulatory and compliance mapping</li><li>Competitive landscape analysis</li><li>Channel &amp; distribution strategy</li><li>Go-to-market timeline and budget</li>',
+    'k-s2-title':'Trade Intelligence Reports',
+    'k-s2-desc':'Sector-specific research reports on sourcing, pricing, regulations, and competitive dynamics — built for decision-makers who need to move fast with the right data.',
+    'k-s2-list':'<li>Pricing benchmarks and margin analysis</li><li>Key supplier and buyer landscape</li><li>Import/export flow data</li><li>Tariff and customs duty overview</li><li>Executive summary + full report</li>',
+    'k-s3-title':'Partner &amp; Supplier Sourcing',
+    'k-s3-desc':'Identification, vetting, and warm introduction of manufacturers, distributors, and trade partners on both sides of the corridor.',
+    'k-s3-list':'<li>Longlist of vetted candidates</li><li>Background and capability checks</li><li>Shortlist with comparison matrix</li><li>Reference verification</li><li>Warm introductions to selected partners</li>',
+    'k-s4-title':'Pricing &amp; Trade Flow Analysis',
+    'k-s4-desc':'Data-driven analysis of trade volumes, pricing benchmarks, tariff implications, and margin structures — the numbers you need before committing.',
+    'k-s4-list':'<li>HS code classification guidance</li><li>Turkey–EU tariff rate analysis</li><li>Landed cost modelling</li><li>Volume and trend data by category</li><li>Margin benchmarks by channel</li>',
+    'k-s5-title':'Customs Union &amp; Compliance Advisory',
+    'k-s5-desc':'Practical guidance on navigating the EU-Turkey Customs Union, UK trade regulations post-Brexit, rules of origin, and documentation requirements — so shipments don\'t get stuck.',
+    'k-s5-list':'<li>EU-Turkey Customs Union scope review</li><li>UK DCTS and TCA implications</li><li>A.TR and EUR.1 movement certificate guidance</li><li>Import/export documentation checklist</li><li>Risk flagging for non-compliant shipments</li>',
+    'k-proc-label':'How We Work','k-proc-title':'From Brief to Results',
+    'k-proc-intro':'Fast turnaround. Fixed, SME-friendly pricing. No retainer until we\'ve proven value.',
+    'k-p1-title':'Discovery Call','k-p1-desc':'Free 30-minute scoping session to understand your market, sector, objectives and timeline.','k-p1-note':'No commitment required. We\'ll tell you upfront if we\'re not the right fit.',
+    'k-p2-title':'Proposal &amp; Scope','k-p2-desc':'Tailored proposal with fixed deliverables, transparent pricing, and a clear timeline. No surprises.','k-p2-note':'Delivered within 48 hours of the discovery call.',
+    'k-p3-title':'Research &amp; Analysis','k-p3-desc':'Deep-dive research combining local on-the-ground intelligence, trade data, and primary source verification.','k-p3-note':'Typical turnaround: 5–12 business days depending on scope.',
+    'k-p4-title':'Delivery &amp; Debrief','k-p4-desc':'Written report with executive summary, plus a live debrief call to walk through findings.','k-p4-note':'Includes 2 weeks of follow-up support after delivery.',
+    'k-sec-label':'Areas of Focus','k-sec-title':'Three Core Sectors',
+    'k-sec-intro':'We concentrate expertise where Turkey holds genuine competitive advantage in European trade.',
+    'k-sec1-name':'Textiles &amp; Apparel','k-sec1-detail':'Sourcing strategy, supplier qualification, lead-time benchmarking, and fast-fashion vs. premium positioning for European buyers.',
+    'k-sec2-name':'Food &amp; Agriculture','k-sec2-detail':'Export compliance, EU food safety regulations, private-label opportunity mapping, and channel analysis across key European markets.',
+    'k-sec3-name':'Building Materials','k-sec3-detail':'Tile, marble, ceramic, and steel trade flows. CE marking requirements, import duties, and contractor channel access in Germany, UK, France and Netherlands.',
+    'k-sec4-name':'UK Market Access','k-sec4-detail':'Post-Brexit UK trade dynamics for Turkish exporters. TCA implications, GB customs procedures, and distribution landscape across key UK channels.',
+    'k-sec5-name':'European Buyers in Turkey','k-sec5-detail':'Entry playbooks for European SMEs opening sourcing operations in Turkey — legal entity setup, partner selection, and cost structure guidance.',
+    'k-sec6-name':'Customs &amp; Compliance','k-sec6-detail':'HS code advisory, rules of origin under the EU-Turkey Customs Union, A.TR and EUR.1 documentation, and compliance checklists for first-time exporters.',
+    'k-ref-label':'References','k-ref-title':'Built on Trust',
+    'k-ref-body':'We are a new firm and believe in letting our work speak for itself. Client references are available on request — we are happy to connect prospective clients with contacts who can speak to the quality of our research and advisory.',
+    'k-ref-cta':'Request References →',
+    'k-about-label':'About','k-about-title':'Built at the Intersection of Two Markets',
+    'k-about-b1':'Golden Horn Advisory was founded to solve a specific problem: SMEs expanding between Turkey and Europe often cannot access the quality of market intelligence that larger firms take for granted, at a price point that makes sense for them.',
+    'k-about-b2':'We combine deep local Istanbul knowledge, an understanding of European business culture, and a rigorous research methodology to deliver intelligence that is actually actionable — not generic reports padded to justify a large fee.',
+    'k-hl1-t':'SME-First Pricing','k-hl1-b':'Fixed-fee engagements designed for companies with real budgets, not McKinsey budgets.',
+    'k-hl2-t':'Sector Depth','k-hl2-b':'We do not advise on everything. We know textiles, food, and building materials deeply.',
+    'k-hl3-t':'Bidirectional Expertise','k-hl3-b':'Equal focus on Turkish exporters going to Europe and European buyers sourcing from Turkey.',
+    'k-corridors':'Active Corridors',
+    'k-trade-stat':'Turkey–EU trade volume exceeded $200B in 2024. We help SMEs capture their share of that opportunity.',
+    'k-blog-label':'Intelligence','k-blog-title':'Insights &amp; Reports',
+    'k-blog-intro':'Trade intelligence, market briefings, and sector analysis for SME decision-makers navigating the Turkey–Europe corridor.',
+    'k-feat-cat':'Featured Report · April 2026','k-feat-title':'Sourcing Textiles from Turkey: A Strategic Guide for European Buyers 2026',
+    'k-feat-excerpt':'A comprehensive guide covering supplier selection, pricing benchmarks, quality standards, lead times, and logistics for European brands sourcing garments and fabric from Turkey.',
+    'k-feat-meta1':'10 pages','k-feat-dl':'Free download','k-feat-cta':'Download Report →',
+    'k-bc1-cat':'Market Briefing','k-bc1-title':'Post-Brexit UK Market Access for Turkish Exporters','k-bc1-date':'Coming Q2 2026',
+    'k-bc2-cat':'Sector Overview','k-bc2-title':'Turkish Tile &amp; Ceramic Exports: Pricing and Channel Analysis','k-bc2-date':'Coming Q3 2026',
+    'k-bc3-cat':'Compliance Guide','k-bc3-title':'EU Food Import Requirements for Turkish Agri Exporters','k-bc3-date':'Coming Q3 2026',
+    'k-li-strong':'Stay informed.','k-li-text':'Follow Golden Horn Advisory on LinkedIn for weekly trade intelligence and market updates.','k-li-btn':'Follow on LinkedIn →',
+    'k-price-label':'Pricing','k-price-title':'Simple, Transparent Pricing',
+    'k-price-intro':'Fixed fees. No hourly billing. No retainer until we\'ve proven value.',
+    'k-price-note':'All prices in USD. Custom engagements available for larger or complex projects.',
+    'k-pt1':'Entry Level','k-pn1':'Market Briefing','k-pp1':'/ report',
+    'k-pd1':'A focused 8–12 page briefing on a specific market, sector, or regulatory question. Ideal for first-time buyers and exporters testing a new market.',
+    'k-pi1-1':'Executive summary','k-pi1-2':'Key data points and benchmarks','k-pi1-3':'3–5 actionable recommendations','k-pi1-4':'30-min debrief call',
+    'k-pcta1':'Get Started →','k-pbadge':'Most Popular','k-pt2':'Core Service','k-pn2':'Full Market Entry Report','k-pp2':'/ project',
+    'k-pd2':'Comprehensive 25–40 page market entry strategy covering regulatory, competitive, channel, and financial dimensions. Our flagship deliverable.',
+    'k-pi2-1':'Full market sizing and opportunity map','k-pi2-2':'Regulatory and compliance roadmap','k-pi2-3':'Competitive landscape analysis','k-pi2-4':'Channel and pricing strategy','k-pi2-5':'Go-to-market timeline','k-pi2-6':'60-min debrief + 2 weeks follow-up',
+    'k-pcta2':'Get Started →','k-pt3':'Ongoing','k-pn3':'Advisory Retainer','k-pp3':'/ month',
+    'k-pd3':'Ongoing trade advisory for companies actively expanding. Dedicated support, monthly intelligence updates, and priority access to our research.',
+    'k-pi3-1':'2 × monthly strategy calls','k-pi3-2':'Monthly trade intelligence update','k-pi3-3':'Unlimited email support','k-pi3-4':'Priority supplier introductions','k-pi3-5':'Quarterly market review','k-pi3-6':'Min. 3-month commitment',
+    'k-pcta3':'Get Started →',
+    'k-price-footer':'All engagements begin with a free 30-minute discovery call. Supplier sourcing and pricing analysis also available as standalone projects from $800.',
+    'k-faq-label':'FAQ','k-faq-title':'Common Questions','k-faq-intro':'Everything you need to know before working with us.',
+    'k-fq1':'Do I need to be based in Turkey or Europe to work with you?','k-fa1':'Not at all. We work with clients globally. What matters is that your business involves the Turkey–Europe trade corridor — whether you\'re sourcing, exporting, or entering a new market.',
+    'k-fq2':'How long does a typical engagement take?','k-fa2':'Market briefings are delivered in 5–7 business days. Full market entry reports take 10–14 business days. Retainer engagements begin immediately from month one.',
+    'k-fq3':'What sectors do you cover?','k-fa3':'We focus on three sectors: textiles &amp; apparel, food &amp; agriculture, and building materials. We also cover cross-cutting topics like customs &amp; compliance and UK market access.',
+    'k-fq4':'How is payment handled?','k-fa4':'We invoice via bank transfer or Wise. For project-based work, 50% is due upfront and 50% on delivery. Retainer clients are billed monthly in advance. All prices in USD.',
+    'k-fq5':'Can you help if I don\'t know which service I need?','k-fa5':'Absolutely. The free discovery call is specifically designed for this. We\'ll understand your situation and recommend the most suitable engagement — with no obligation.',
+    'k-fq6':'Do you work with Turkish exporters as well as European buyers?','k-fa6':'Yes — this is a core part of our differentiation. We work equally with Turkish companies looking to enter European markets and European companies sourcing from Turkey.',
+    'k-fq7':'What languages do you work in?','k-fa7':'English and Turkish. All reports are delivered in English as standard; Turkish versions available on request at no additional cost.',
+    'k-fq8':'Are your reports confidential?','k-fa8':'Yes. All client work is strictly confidential. We do not share client information, company details, or report contents with any third party without explicit written consent.',
+    'k-cnt-label':'Contact','k-cnt-title':'Start the Conversation','k-cnt-intro':'Book a free 30-minute discovery call or send us a project brief. We respond within 24 hours.',
+    'k-cl-email':'Email','k-cl-loc':'Based In','k-cv-loc':'Istanbul, Turkey','k-cl-resp':'Response Time','k-cv-resp':'Within 24 hours','k-cl-lang':'Languages','k-cl-call':'Discovery Call','k-cv-call':'30 minutes · Free · No commitment',
+    'k-fl-fname':'First Name','k-fl-lname':'Last Name','k-fl-company':'Company','k-fl-email':'Email','k-fl-svc':'Service Interest','k-fl-brief':'Project Brief',
+    'k-fopt0':'Select a service','k-fopt1':'Market Entry Strategy','k-fopt2':'Trade Intelligence Report','k-fopt3':'Supplier / Partner Sourcing','k-fopt4':'Pricing &amp; Trade Flow Analysis','k-fopt5':'Customs &amp; Compliance Advisory','k-fopt6':'Other / Not Sure Yet',
+    'k-submit':'Send Enquiry →',
+    'k-ft-sub':'Turkey · Europe Trade Consultancy','k-ft-tag':'Strategic intelligence for SMEs navigating the Turkey–Europe corridor.',
+    'k-ft-svc-h':'Services','k-ft-svc1':'Market Entry','k-ft-svc2':'Trade Intelligence','k-ft-svc3':'Supplier Sourcing','k-ft-svc4':'Customs Advisory',
+    'k-ft-co-h':'Company','k-ft-co1':'About','k-ft-co2':'Sectors','k-ft-co3':'Insights','k-ft-co4':'Contact',
+    'k-ft-copy':'© 2026 Golden Horn Advisory.','k-ft-privacy':'Privacy Policy',
+    'cookie-text-p':'We use cookies to improve your experience. By continuing, you agree to our <a href="#">Privacy Policy</a>.','cookie-accept-btn':'Accept','cookie-decline-btn':'Decline',
+  },
+  tr: {
+    'k-nav-sub':'Türkiye–Avrupa Ticaret Danışmanlığı',
+    'k-nav-svc':'Hizmetler','k-nav-sec':'Sektörler','k-nav-about':'Hakkımızda','k-nav-blog':'Makaleler','k-nav-cta':'İletişim',
+    'k-hero-badge':'Türkiye · Avrupa Ticaret Danışmanlığı',
+    'k-hero-title':'<em>Türkiye</em> ile<br>Avrupa\'yı Birleştiriyoruz.',
+    'k-hero-sub':'KOBİ\'lerin Türkiye–Avrupa ticaret koridorunda yol almasına yardımcı oluyoruz — pazar giriş stratejisinden tedarikçi teminine ve ticaret istihbaratına kadar.',
+    'k-hero-sub2':'Küresel bir danışmanlık şirketinin ek maliyeti olmadan hızlı sonuç isteyen şirketler için pratik, zekaya dayalı danışmanlık.',
+    'k-hero-cta1':'Danışmanlık Talep Edin','k-hero-cta2':'Hizmetlerimizi Keşfedin →',
+    'k-prop1':'Temel Sektör','k-prop2':'Pazar','k-prop3':'Odaklı Fiyat',
+    'k-svc-label':'Ne Yapıyoruz','k-svc-title':'Danışmanlık Hizmetleri',
+    'k-svc-intro':'Türkiye ile Avrupa pazarları arasında büyüyen işletmeler için pratik, zekaya dayalı rehberlik — danışmanlık ek maliyeti olmadan.',
+    'k-s1-title':'Pazar Giriş Stratejisi',
+    'k-s1-desc':'Türkiye\'ye giren Avrupalı şirketler veya AB ve İngiltere\'yi hedefleyen Türk ihracatçılar için tam kapsamlı giriş planlaması — düzenleyici haritalamadan kanal stratejisine kadar.',
+    'k-inc':'İçerir','k-inc2':'İçerir','k-inc3':'İçerir','k-inc4':'İçerir','k-inc5':'İçerir',
+    'k-s1-list':'<li>Pazar büyüklüğü ve fırsat değerlendirmesi</li><li>Düzenleyici ve uyum haritalaması</li><li>Rekabet ortamı analizi</li><li>Kanal ve dağıtım stratejisi</li><li>Pazara giriş takvimi ve bütçesi</li>',
+    'k-s2-title':'Ticaret İstihbarat Raporları',
+    'k-s2-desc':'Tedarik, fiyatlandırma, düzenlemeler ve rekabet dinamikleri hakkında sektöre özgü araştırma raporları — doğru verilerle hızlı hareket etmesi gereken karar vericiler için.',
+    'k-s2-list':'<li>Fiyat kıyaslamaları ve marj analizi</li><li>Tedarikçi ve alıcı ortamı</li><li>İthalat/ihracat akış verileri</li><li>Tarife ve gümrük vergisi özeti</li><li>Yönetici özeti + tam rapor</li>',
+    'k-s3-title':'Ortak ve Tedarikçi Temini',
+    'k-s3-desc':'Her iki tarafta üreticilerin, distribütörlerin ve ticaret ortaklarının tanımlanması, incelenmesi ve sıcak tanıtımı.',
+    'k-s3-list':'<li>İncelenmiş adaylar uzun listesi</li><li>Geçmiş ve yetenek kontrolleri</li><li>Karşılaştırma matrisi ile kısa liste</li><li>Referans doğrulaması</li><li>Seçilen ortaklara sıcak tanıtımlar</li>',
+    'k-s4-title':'Fiyat ve Ticaret Akışı Analizi',
+    'k-s4-desc':'Ticaret hacimleri, fiyat kıyaslamaları, tarife etkileri ve marj yapılarının veri odaklı analizi — taahhüt etmeden önce ihtiyaç duyduğunuz rakamlar.',
+    'k-s4-list':'<li>HS kodu sınıflandırma rehberliği</li><li>Türkiye–AB tarife oranı analizi</li><li>İnilen maliyet modellemesi</li><li>Kategoriye göre hacim ve trend verileri</li><li>Kanala göre marj kıyaslamaları</li>',
+    'k-s5-title':'Gümrük Birliği ve Uyum Danışmanlığı',
+    'k-s5-desc':'AB-Türkiye Gümrük Birliği, Brexit sonrası İngiltere ticaret düzenlemeleri, menşe kuralları ve belgeleme gereksinimleri konusunda pratik rehberlik.',
+    'k-s5-list':'<li>AB-Türkiye Gümrük Birliği kapsam incelemesi</li><li>İngiltere DCTS ve TCA etkileri</li><li>A.TR ve EUR.1 dolaşım belgesi rehberliği</li><li>İthalat/ihracat belgeleme kontrol listesi</li><li>Uyumsuz sevkiyatlar için risk işaretleme</li>',
+    'k-proc-label':'Nasıl Çalışıyoruz','k-proc-title':'Brifinten Sonuçlara',
+    'k-proc-intro':'Hızlı teslimat. Sabit, KOBİ dostu fiyatlandırma. Değeri kanıtlayana kadar retainer yok.',
+    'k-p1-title':'Keşif Görüşmesi','k-p1-desc':'Pazarınızı, sektörünüzü, hedeflerinizi ve zaman çizelgenizi anlamak için ücretsiz 30 dakikalık görüşme.','k-p1-note':'Taahhüt gerekmiyor. Doğru seçenek olup olmadığımızı baştan söyleriz.',
+    'k-p2-title':'Teklif ve Kapsam','k-p2-desc':'Sabit teslimatlar, şeffaf fiyatlandırma ve net bir zaman çizelgesi ile kişiselleştirilmiş teklif.','k-p2-note':'Keşif görüşmesinden 48 saat içinde teslim edilir.',
+    'k-p3-title':'Araştırma ve Analiz','k-p3-desc':'Yerelde istihbarat, ticaret verileri ve birincil kaynak doğrulamasını birleştiren derinlemesine araştırma.','k-p3-note':'Tipik teslimat: Kapsama bağlı olarak 5–12 iş günü.',
+    'k-p4-title':'Teslimat ve Brifing','k-p4-desc':'Yönetici özeti içeren yazılı rapor ve bulguları gözden geçirmek için canlı brifing görüşmesi.','k-p4-note':'Teslimat sonrasında 2 haftalık takip desteği içerir.',
+    'k-sec-label':'Odak Alanları','k-sec-title':'Üç Temel Sektör',
+    'k-sec-intro':'Türkiye\'nin Avrupa ticaretinde gerçek rekabet avantajına sahip olduğu alanlarda uzmanlık geliştiriyoruz.',
+    'k-sec1-name':'Tekstil ve Giyim','k-sec1-detail':'Tedarik stratejisi, tedarikçi nitelendirmesi, teslimat süresi kıyaslaması ve Avrupalı alıcılar için hızlı moda vs. premium konumlandırma.',
+    'k-sec2-name':'Gıda ve Tarım','k-sec2-detail':'İhracat uyumu, AB gıda güvenliği düzenlemeleri, özel etiket fırsat haritalaması ve başlıca Avrupa pazarlarında kanal analizi.',
+    'k-sec3-name':'Yapı Malzemeleri','k-sec3-detail':'Fayans, mermer, seramik ve çelik ticaret akışları. Almanya, İngiltere, Fransa ve Hollanda\'da CE işaretleme, ithalat vergileri ve müteahhit kanal erişimi.',
+    'k-sec4-name':'İngiltere Pazarına Giriş','k-sec4-detail':'Türk ihracatçılar için Brexit sonrası İngiltere ticaret dinamikleri. TCA etkileri, İngiltere gümrük prosedürleri ve dağıtım ortamı.',
+    'k-sec5-name':'Türkiye\'deki Avrupalı Alıcılar','k-sec5-detail':'Türkiye\'de tedarik operasyonları açan Avrupalı KOBİ\'ler için giriş rehberleri — tüzel kişi kurulumu, ortak seçimi ve maliyet yapısı.',
+    'k-sec6-name':'Gümrük ve Uyum','k-sec6-detail':'HS kodu danışmanlığı, AB-Türkiye Gümrük Birliği kapsamında menşe kuralları, A.TR ve EUR.1 belgelendirmesi ve ilk kez ihracat yapanlar için uyum kontrol listeleri.',
+    'k-ref-label':'Referanslar','k-ref-title':'Güven Üzerine Kurulu',
+    'k-ref-body':'Yeni bir firmayız ve işimizin kendini ifade etmesine inanıyoruz. Müşteri referansları talep üzerine sunulmaktadır — potansiyel müşterileri araştırma ve danışmanlık kalitemiz hakkında bilgi verebilecek kişilerle bağlantıya geçirmekten memnuniyet duyarız.',
+    'k-ref-cta':'Referans Talep Et →',
+    'k-about-label':'Hakkımızda','k-about-title':'İki Pazarın Kesişiminde Kuruldu',
+    'k-about-b1':'Golden Horn Advisory belirli bir sorunu çözmek için kuruldu: Türkiye ile Avrupa arasında büyüyen KOBİ\'ler, büyük firmaların sıradan saydığı kalitede pazar istihbaratına kendileri için mantıklı bir fiyatla erişemiyor.',
+    'k-about-b2':'Derin yerel İstanbul bilgisini, Avrupa iş kültürünün anlaşılmasını ve titiz bir araştırma metodolojisini birleştirerek gerçekten uygulanabilir istihbarat sunuyoruz — büyük bir ücreti haklı çıkarmak için şişirilmiş genel raporlar değil.',
+    'k-hl1-t':'KOBİ Odaklı Fiyatlandırma','k-hl1-b':'Gerçek bütçeleri olan şirketler için tasarlanmış sabit ücretli görevler — McKinsey bütçesi değil.',
+    'k-hl2-t':'Sektör Derinliği','k-hl2-b':'Her konuda danışmanlık yapmıyoruz. Tekstil, gıda ve yapı malzemelerini derinlemesine biliyoruz.',
+    'k-hl3-t':'İki Yönlü Uzmanlık','k-hl3-b':'Avrupa\'ya giden Türk ihracatçılara ve Türkiye\'den tedarik yapan Avrupalı alıcılara eşit odaklanma.',
+    'k-corridors':'Aktif Koridorlar',
+    'k-trade-stat':'Türkiye–AB ticaret hacmi 2024\'te 200 milyar doları aştı. KOBİ\'lerin bu fırsattan paylarını almasına yardımcı oluyoruz.',
+    'k-blog-label':'Raporlar','k-blog-title':'Makaleler ve Raporlar',
+    'k-blog-intro':'Türkiye–Avrupa koridorunda hareket eden KOBİ karar vericileri için ticaret istihbaratı, pazar brifingleri ve sektör analizleri.',
+    'k-feat-cat':'Öne Çıkan Rapor · Nisan 2026','k-feat-title':'Türkiye\'den Tekstil Tedariki: Avrupalı Alıcılar için Stratejik Rehber 2026',
+    'k-feat-excerpt':'Türkiye\'den giysi ve kumaş tedarik eden Avrupalı markalar için tedarikçi seçimi, fiyat kıyaslamaları, kalite standartları, teslimat süreleri ve lojistiği kapsayan kapsamlı bir rehber.',
+    'k-feat-meta1':'10 sayfa','k-feat-dl':'Ücretsiz indirme','k-feat-cta':'Raporu İndir →',
+    'k-bc1-cat':'Pazar Brifing','k-bc1-title':'Brexit Sonrası Türk İhracatçılar için İngiltere Pazar Erişimi','k-bc1-date':'Q2 2026\'da',
+    'k-bc2-cat':'Sektör Genel Bakış','k-bc2-title':'Türk Fayans ve Seramik İhracatı: Fiyat ve Kanal Analizi','k-bc2-date':'Q3 2026\'da',
+    'k-bc3-cat':'Uyum Rehberi','k-bc3-title':'Türk Tarım İhracatçıları için AB Gıda İthalat Gereksinimleri','k-bc3-date':'Q3 2026\'da',
+    'k-li-strong':'Bilgi sahibi olun.','k-li-text':'Haftalık ticaret istihbaratı ve pazar güncellemeleri için LinkedIn\'de takip edin.','k-li-btn':'LinkedIn\'de Takip Et →',
+    'k-price-label':'Fiyatlandırma','k-price-title':'Sade ve Şeffaf Fiyatlandırma',
+    'k-price-intro':'Sabit ücretler. Saatlik fatura yok. Değeri kanıtlayana kadar retainer yok.',
+    'k-price-note':'Tüm fiyatlar USD cinsinden. Büyük veya karmaşık projeler için özel teklifler mevcuttur.',
+    'k-pt1':'Başlangıç Seviyesi','k-pn1':'Pazar Brifing','k-pp1':'/ rapor',
+    'k-pd1':'Belirli bir pazar, sektör veya düzenleyici soru hakkında 8-12 sayfalık odaklı brifing. Yeni bir pazarı test eden ilk kez alıcı ve ihracatçılar için ideal.',
+    'k-pi1-1':'Yönetici özeti','k-pi1-2':'Temel veri noktaları ve kıyaslamalar','k-pi1-3':'3–5 uygulanabilir öneri','k-pi1-4':'30 dakikalık brifing görüşmesi',
+    'k-pcta1':'Başlayın →','k-pbadge':'En Popüler','k-pt2':'Temel Hizmet','k-pn2':'Tam Pazar Giriş Raporu','k-pp2':'/ proje',
+    'k-pd2':'Düzenleyici, rekabetçi, kanal ve finansal boyutları kapsayan 25-40 sayfalık kapsamlı pazar giriş stratejisi. Amiral gemisi teslimatımız.',
+    'k-pi2-1':'Tam pazar büyüklüğü ve fırsat haritası','k-pi2-2':'Düzenleyici ve uyum yol haritası','k-pi2-3':'Rekabet ortamı analizi','k-pi2-4':'Kanal ve fiyatlandırma stratejisi','k-pi2-5':'Pazara giriş takvimi','k-pi2-6':'60 dakikalık brifing + 2 hafta takip',
+    'k-pcta2':'Başlayın →','k-pt3':'Süregelen','k-pn3':'Danışmanlık Retainer','k-pp3':'/ ay',
+    'k-pd3':'Aktif olarak büyüyen şirketler için süregelen ticaret danışmanlığı. Özel destek, aylık istihbarat güncellemeleri ve araştırmamıza öncelikli erişim.',
+    'k-pi3-1':'Ayda 2 strateji görüşmesi','k-pi3-2':'Aylık ticaret istihbaratı güncellemesi','k-pi3-3':'Sınırsız email desteği','k-pi3-4':'Öncelikli tedarikçi tanıtımları','k-pi3-5':'Üç aylık pazar incelemesi','k-pi3-6':'Min. 3 aylık taahhüt',
+    'k-pcta3':'Başlayın →',
+    'k-price-footer':'Tüm görevler ücretsiz 30 dakikalık keşif görüşmesiyle başlar. Tedarikçi temini ve fiyat analizi 800$\'dan başlayan bağımsız projeler olarak da sunulmaktadır.',
+    'k-faq-label':'SSS','k-faq-title':'Sık Sorulan Sorular','k-faq-intro':'Bizimle çalışmadan önce bilmeniz gereken her şey.',
+    'k-fq1':'Sizinle çalışmak için Türkiye\'de veya Avrupa\'da mı olmam gerekiyor?','k-fa1':'Hayır. Dünya genelinde müşterilerle çalışıyoruz. Önemli olan işinizin Türkiye–Avrupa ticaret koridorunu içermesi — tedarik ediyor, ihracat yapıyor ya da yeni bir pazara giriyor olsanız da.',
+    'k-fq2':'Tipik bir görev ne kadar sürer?','k-fa2':'Pazar brifingleri 5-7 iş günü içinde teslim edilir. Tam pazar giriş raporları 10-14 iş günü sürer. Retainer görevleri birinci aydan itibaren başlar.',
+    'k-fq3':'Hangi sektörleri kapsıyorsunuz?','k-fa3':'Üç sektöre odaklanıyoruz: tekstil ve giyim, gıda ve tarım, yapı malzemeleri. Ayrıca gümrük ve uyum ile İngiltere pazarına erişim gibi kesişen konuları da kapsıyoruz.',
+    'k-fq4':'Ödeme nasıl yapılıyor?','k-fa4':'Banka transferi veya Wise üzerinden fatura kesiyoruz. Proje bazlı işler için %50 peşin, %50 teslimat sonrası ödenir. Retainer müşteriler aylık önceden faturalandırılır. Tüm fiyatlar USD cinsinden.',
+    'k-fq5':'Hangi hizmete ihtiyacım olduğunu bilmiyorsam yardımcı olabilir misiniz?','k-fa5':'Kesinlikle. Ücretsiz keşif görüşmesi özellikle bunun için tasarlanmıştır. Durumunuzu anlayacak ve hiçbir taahhüt olmadan en uygun görevi önereceğiz.',
+    'k-fq6':'Türk ihracatçılarla da Avrupalı alıcılarla da çalışıyor musunuz?','k-fa6':'Evet — bu farklılaşmamızın temel parçası. Avrupa pazarlarına girmek isteyen Türk şirketlerle ve Türkiye\'den tedarik yapan Avrupalı şirketlerle eşit ölçüde çalışıyoruz.',
+    'k-fq7':'Hangi dillerde çalışıyorsunuz?','k-fa7':'İngilizce ve Türkçe. Tüm raporlar standart olarak İngilizce teslim edilir; Türkçe versiyonlar talep üzerine ek ücret alınmadan sunulabilir.',
+    'k-fq8':'Raporlarınız gizli mi?','k-fa8':'Evet. Tüm müşteri çalışmaları kesinlikle gizlidir. Müşteri bilgilerini, şirket detaylarını veya rapor içeriklerini açık yazılı onay olmadan hiçbir üçüncü tarafla paylaşmıyoruz.',
+    'k-cnt-label':'İletişim','k-cnt-title':'Konuşmayı Başlatın','k-cnt-intro':'Ücretsiz 30 dakikalık keşif görüşmesi ayarlayın veya proje brifing gönderin. 24 saat içinde yanıt veriyoruz.',
+    'k-cl-email':'E-posta','k-cl-loc':'Lokasyon','k-cv-loc':'İstanbul, Türkiye','k-cl-resp':'Yanıt Süresi','k-cv-resp':'24 saat içinde','k-cl-lang':'Diller','k-cl-call':'Keşif Görüşmesi','k-cv-call':'30 dakika · Ücretsiz · Taahhütsüz',
+    'k-fl-fname':'Ad','k-fl-lname':'Soyad','k-fl-company':'Şirket','k-fl-email':'E-posta','k-fl-svc':'Hizmet İlgi Alanı','k-fl-brief':'Proje Brifing',
+    'k-fopt0':'Hizmet seçin','k-fopt1':'Pazar Giriş Stratejisi','k-fopt2':'Ticaret İstihbarat Raporu','k-fopt3':'Tedarikçi / Ortak Temini','k-fopt4':'Fiyat ve Ticaret Akışı Analizi','k-fopt5':'Gümrük ve Uyum Danışmanlığı','k-fopt6':'Diğer / Henüz Emin Değilim',
+    'k-submit':'Sorgu Gönder →',
+    'k-ft-sub':'Türkiye · Avrupa Ticaret Danışmanlığı','k-ft-tag':'Türkiye–Avrupa koridorunda hareket eden KOBİ\'ler için stratejik istihbarat.',
+    'k-ft-svc-h':'Hizmetler','k-ft-svc1':'Pazar Girişi','k-ft-svc2':'Ticaret İstihbaratı','k-ft-svc3':'Tedarikçi Temini','k-ft-svc4':'Gümrük Danışmanlığı',
+    'k-ft-co-h':'Şirket','k-ft-co1':'Hakkımızda','k-ft-co2':'Sektörler','k-ft-co3':'Makaleler','k-ft-co4':'İletişim',
+    'k-ft-copy':'© 2026 Golden Horn Advisory.','k-ft-privacy':'Gizlilik Politikası',
+    'cookie-text-p':'Deneyiminizi iyileştirmek için çerez kullanıyoruz. Devam ederek <a href="#">Gizlilik Politikamızı</a> kabul etmiş olursunuz.','cookie-accept-btn':'Kabul Et','cookie-decline-btn':'Reddet',
+  }
+};
+
+let lang = 'en';
+
+function setLang(l) {
+  lang = l;
+  document.documentElement.lang = l;
+
+  // Toggle active class on buttons
+  document.getElementById('btn-en').classList.toggle('active', l === 'en');
+  document.getElementById('btn-tr').classList.toggle('active', l === 'tr');
+
+  // Update every element by id
+  const data = T[l];
+  for (const id in data) {
+    const el = document.getElementById(id);
+    if (!el) continue;
+    const val = data[id];
+    // Handle special element types
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.placeholder = val;
+    } else if (el.tagName === 'OPTION') {
+      el.textContent = val;
+    } else {
+      el.innerHTML = val;
+    }
+  }
+}
+
+// FAQ
+function toggleFaq(el) {
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('open'));
+  if (!isOpen) el.classList.add('open');
+}
+
+// Cookie
+function closeCookie() {
+  document.getElementById('cookie-banner').style.display = 'none';
+  try { localStorage.setItem('gha-cookie', '1'); } catch(e) {}
+}
+window.addEventListener('load', () => {
+  try { if (localStorage.getItem('gha-cookie')) document.getElementById('cookie-banner').style.display = 'none'; } catch(e) {}
+});
+
+// Menu
+function toggleMenu() {
+  const nl = document.getElementById('nav-links');
+  nl.style.display = nl.style.display === 'flex' ? '' : 'flex';
+  if (nl.style.display === 'flex') {
+    nl.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:#0A1628;padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(196,152,74,0.2);z-index:99;';
+  }
+}
+
+// Form
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('k-submit');
+  btn.textContent = lang === 'en' ? 'Sent ✓' : 'Gönderildi ✓';
+  btn.style.background = '#3A6B4A';
+  setTimeout(() => { btn.innerHTML = T[lang]['k-submit']; btn.style.background = ''; }, 3000);
+}
+
+// Scroll animations
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+      e.target.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+    }
+  });
+}, { threshold: 0.07 });
+
+document.querySelectorAll('.svc-card, .proc-step, .sec-item, .blog-card, .hl-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(16px)';
+  obs.observe(el);
+});
+
+// Nav shrink
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (nav) nav.style.padding = window.scrollY > 60 ? '0.75rem 5vw' : '1.2rem 5vw';
+});
+</script>
+</body>
+</html>
