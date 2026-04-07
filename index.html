@@ -513,14 +513,14 @@ footer{background:#060F1B;padding:3rem 5vw 2rem;border-top:1px solid rgba(196,15
     </div>
     <form class="cnt-form" action="https://formspree.io/f/xzdkwbzg" method="POST" onsubmit="handleSubmit(event)">
       <div class="f-row">
-        <div class="f-grp"><label id="k-fl-fname">First Name</label><input type="text" id="k-fi-fname" placeholder="John"></div>
-        <div class="f-grp"><label id="k-fl-lname">Last Name</label><input type="text" id="k-fi-lname" placeholder="Smith"></div>
+        <div class="f-grp"><label id="k-fl-fname">First Name</label><input type="text" id="k-fi-fname" name="first_name" placeholder="John"></div>
+        <div class="f-grp"><label id="k-fl-lname">Last Name</label><input type="text" id="k-fi-lname" name="last_name" placeholder="Smith"></div>
       </div>
-      <div class="f-grp"><label id="k-fl-company">Company</label><input type="text" id="k-fi-company" placeholder="Your company name"></div>
-      <div class="f-grp"><label id="k-fl-email">Email</label><input type="email" id="k-fi-email" placeholder="john@company.com"></div>
+      <div class="f-grp"><label id="k-fl-company">Company</label><input type="text" id="k-fi-company" name="company" placeholder="Your company name"></div>
+      <div class="f-grp"><label id="k-fl-email">Email</label><input type="email" id="k-fi-email" name="email" placeholder="john@company.com"></div>
       <div class="f-grp">
         <label id="k-fl-svc">Service Interest</label>
-        <select id="svc-select">
+        <select id="svc-select" name="service">
           <option value="" disabled selected id="k-fopt0">Select a service</option>
           <option id="k-fopt1">Market Entry Strategy</option>
           <option id="k-fopt2">Trade Intelligence Report</option>
@@ -530,7 +530,7 @@ footer{background:#060F1B;padding:3rem 5vw 2rem;border-top:1px solid rgba(196,15
           <option id="k-fopt6">Other / Not Sure Yet</option>
         </select>
       </div>
-      <div class="f-grp"><label id="k-fl-brief">Project Brief</label><textarea id="k-fi-brief" placeholder="Tell us about your target market, sector, and what you need..."></textarea></div>
+      <div class="f-grp"><label id="k-fl-brief">Project Brief</label><textarea id="k-fi-brief" name="message" placeholder="Tell us about your target market, sector, and what you need..."></textarea></div>
       <button type="submit" class="f-submit" id="k-submit">Send Enquiry →</button>
     </form>
   </div>
