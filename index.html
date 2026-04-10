@@ -44,8 +44,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(30px,-22px) scale(1.05);}66%{transform:translate(-18px,16px) scale(0.97);}}
 .hero-orb{position:absolute;width:650px;height:650px;right:-80px;bottom:-180px;background:radial-gradient(circle,rgba(196,152,74,0.07) 0%,rgba(196,152,74,0.03) 40%,transparent 70%);border-radius:50%;animation:orbFloat 14s ease-in-out infinite;pointer-events:none;z-index:1;}
 .hero-bg-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;}
-.hero-content{max-width:820px;position:relative;z-index:2;}
-.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.65rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;}
+.hero-content{max-width:820px;position:relative;z-index:3;}
+.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.65rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:#C4984A;margin-bottom:2rem;opacity:1;}
 .hero-badge::before{content:'';display:block;width:28px;height:1px;background:var(--gold);}
 .hero-title{font-family:'Cormorant Garant',serif;font-size:clamp(3rem,7vw,5.8rem);font-weight:500;line-height:1.03;color:var(--white);margin-bottom:1.75rem;}
 .hero-title em{font-style:italic;color:var(--gold-light);}
@@ -248,16 +248,31 @@ footer{background:#060F1B;padding:3rem 5vw 2rem;border-top:1px solid rgba(196,15
 .cookie-decline{background:transparent;color:rgba(253,250,245,0.4);border:1px solid rgba(253,250,245,0.15);padding:0.55rem 1.25rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;cursor:pointer;border-radius:2px;}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-.fu{animation:fadeUp 0.7s ease forwards;opacity:0;}
-.d1{animation-delay:0.1s;}.d2{animation-delay:0.28s;}.d3{animation-delay:0.45s;}.d4{animation-delay:0.62s;}
+.fu{animation:fadeUp 0.7s ease forwards;animation-fill-mode:forwards;opacity:0;}
+.d1{animation-delay:0.1s;}.d2{animation-delay:0.28s;}.d3{animation-delay:0.42s;}.d4{animation-delay:0.56s;}
 
 /* NAV BRAND */
 .nav-brand{font-family:'Cormorant Garant',serif;font-size:1.4rem;font-weight:600;color:#C4984A;margin-left:0.85rem;letter-spacing:0.02em;white-space:nowrap;text-shadow:0 0 20px rgba(196,152,74,0.3);}
 @media(max-width:520px){.nav-brand{display:none;}}
 
-/* HERO SHIMMER */
+/* HERO SHIMMER — animation combined with fadeUp to avoid overriding opacity:0 from .fu */
 @keyframes heroShimmer{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}}
-.hero-title{font-family:'Cormorant Garant',serif;font-size:clamp(3rem,7vw,5.8rem);font-weight:500;line-height:1.03;margin-bottom:1.75rem;background:linear-gradient(105deg,#FDFAF5 0%,#FDFAF5 30%,#D4AD6A 50%,#FDFAF5 70%,#FDFAF5 100%);background-size:300% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:heroShimmer 8s ease-in-out infinite;}
+.hero-title{
+  font-family:'Cormorant Garant',serif;
+  font-size:clamp(3rem,7vw,5.8rem);
+  font-weight:500;
+  line-height:1.03;
+  margin-bottom:1.75rem;
+  color:#FDFAF5;
+  background:linear-gradient(105deg,#FDFAF5 0%,#FDFAF5 30%,#D4AD6A 50%,#FDFAF5 70%,#FDFAF5 100%);
+  background-size:300% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  opacity:0;
+  /* fadeUp runs first (0.28s delay, 0.7s duration), then shimmer begins at 1.0s */
+  animation:fadeUp 0.7s ease 0.28s forwards, heroShimmer 8s 1.0s ease-in-out infinite;
+}
 .hero-title em{font-style:italic;-webkit-text-fill-color:transparent;}
 
 /* ENHANCED CARD TRANSITIONS */
