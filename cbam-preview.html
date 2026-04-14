@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBAM Report Preview — Golden Horn Advisory</title>
+<meta name="description" content="Free preview: CBAM & EU Green Trade Compliance — A Practical Guide for Turkish Exporters 2026. Executive summary, what CBAM is, and sectors in scope.">
+<link rel="icon" type="image/png" href="gha-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --navy:#0A1628;--navy-mid:#112040;
+  --gold:#C4984A;--gold-light:#D4AD6A;
+  --cream:#F7F2E8;--white:#FDFAF5;
+  --text-dark:#0A1628;--text-mid:#1E2D42;--text-muted:#4A5A6A;
+  --border:rgba(196,152,74,0.2);
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text-dark);overflow-x:hidden;font-weight:400;-webkit-font-smoothing:antialiased;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5vw;background:rgba(10,22,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,152,74,0.3);transition:padding 0.3s;}
+nav.scrolled{padding:0.75rem 5vw;}
+nav.scrolled .nav-logo img{height:36px;}
+.nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+.nav-logo img{display:block;height:48px;width:auto;transition:height 0.3s ease;}
+.nav-brand{font-family:'Cormorant Garant',serif;font-size:1.4rem;font-weight:600;color:#C4984A;margin-left:0.85rem;letter-spacing:0.02em;white-space:nowrap;text-shadow:0 0 20px rgba(196,152,74,0.3);}
+@media(max-width:520px){.nav-brand{display:none;}}
+.nav-right{display:flex;align-items:center;gap:1.5rem;}
+.nav-links{display:flex;gap:1.75rem;list-style:none;}
+.nav-links a{color:rgba(253,250,245,0.8);text-decoration:none;font-size:0.75rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-links a.active{color:var(--gold);}
+.nav-cta{border:1px solid var(--gold)!important;color:var(--gold)!important;padding:0.45rem 1.1rem;border-radius:2px;transition:background 0.2s,color 0.2s!important;}
+.nav-cta:hover{background:var(--gold)!important;color:var(--navy)!important;}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+.menu-toggle span{display:block;width:20px;height:1px;background:var(--gold);}
+@media(max-width:960px){.nav-links{display:none;}.menu-toggle{display:flex;}}
+
+/* HERO */
+#preview-hero{background:var(--navy);padding:8rem 5vw 4.5rem;position:relative;overflow:hidden;border-bottom:1px solid rgba(196,152,74,0.15);}
+#preview-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 60%,rgba(196,152,74,0.09) 0%,transparent 60%);pointer-events:none;}
+.hero-bg-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.5;}
+.hero-inner{position:relative;z-index:2;max-width:780px;}
+.preview-badge{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.63rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;}
+.preview-badge::before{content:'';display:block;width:28px;height:1px;background:var(--gold);}
+.preview-badge-pill{display:inline-block;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;background:rgba(196,152,74,0.15);color:var(--gold);border:1px solid rgba(196,152,74,0.3);padding:0.25rem 0.7rem;border-radius:2px;margin-left:0.75rem;vertical-align:middle;}
+.preview-title{font-family:'Cormorant Garant',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:500;line-height:1.07;color:var(--white);margin-bottom:0.9rem;}
+.preview-subtitle{font-family:'Cormorant Garant',serif;font-size:clamp(1.1rem,2.5vw,1.5rem);font-weight:400;font-style:italic;color:var(--gold-light);margin-bottom:1.5rem;}
+.preview-meta{font-size:0.8rem;font-weight:400;color:rgba(253,250,245,0.5);display:flex;flex-wrap:wrap;gap:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(196,152,74,0.15);}
+.preview-meta span{display:flex;align-items:center;gap:0.45rem;}
+.preview-meta span::before{content:'';display:block;width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+
+/* CONTENT WRAPPER */
+.report-wrap{max-width:800px;margin:0 auto;padding:4rem 5vw 0;}
+
+/* TYPOGRAPHY */
+.rpt-section{margin-bottom:3.5rem;}
+.rpt-section-num{font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem;}
+.rpt-section-num::before{content:'';display:block;width:16px;height:1px;background:var(--gold);}
+.rpt-h2{font-family:'Cormorant Garant',serif;font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:500;line-height:1.12;color:var(--text-dark);margin-bottom:0.5rem;}
+.rpt-h3{font-family:'Cormorant Garant',serif;font-size:1.25rem;font-weight:500;color:var(--text-dark);margin:2rem 0 0.75rem;}
+.gold-rule{width:36px;height:1px;background:var(--gold);margin:1rem 0 1.75rem;}
+.rpt-p{font-size:0.94rem;line-height:1.85;color:var(--text-mid);margin-bottom:1.1rem;}
+.rpt-p strong{color:var(--text-dark);font-weight:500;}
+
+/* CALLOUT */
+.rpt-callout{background:rgba(10,22,40,0.04);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;margin:1.75rem 0;border-radius:0 2px 2px 0;}
+.rpt-callout p{font-size:0.9rem;line-height:1.8;color:var(--text-mid);margin:0;}
+.rpt-callout p strong{color:var(--text-dark);}
+
+/* ACTION BOX */
+.rpt-action{background:var(--cream);border:1px solid var(--border);padding:1.1rem 1.4rem;margin:2rem 0;border-radius:2px;}
+.rpt-action-label{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:0.4rem;}
+.rpt-action p{font-size:0.85rem;line-height:1.75;color:var(--text-mid);margin:0;}
+
+/* THREE FINDINGS */
+.findings-grid{display:flex;flex-direction:column;gap:1.5rem;margin:1.75rem 0;}
+.finding{display:flex;gap:1.25rem;align-items:flex-start;}
+.finding-num{font-family:'Cormorant Garant',serif;font-size:2.2rem;font-weight:500;color:var(--gold);line-height:1;flex-shrink:0;width:2.2rem;text-align:right;}
+.finding-body{}
+.finding-body strong{display:block;font-size:0.9rem;font-weight:500;color:var(--text-dark);margin-bottom:0.35rem;line-height:1.35;}
+.finding-body p{font-size:0.88rem;line-height:1.8;color:var(--text-mid);margin:0;}
+
+/* TABLE */
+.rpt-table-wrap{overflow-x:auto;margin:1.75rem 0;}
+table{width:100%;border-collapse:collapse;font-size:0.84rem;}
+thead tr{background:var(--navy);}
+thead th{color:rgba(253,250,245,0.85);font-weight:400;letter-spacing:0.05em;padding:0.75rem 1rem;text-align:left;font-size:0.78rem;}
+tbody tr{border-bottom:1px solid rgba(10,22,40,0.07);}
+tbody tr:last-child{border-bottom:none;}
+tbody td{padding:0.7rem 1rem;color:var(--text-mid);line-height:1.5;}
+tbody tr:nth-child(even){background:rgba(10,22,40,0.025);}
+.highlight-row td{color:var(--text-dark);font-weight:500;}
+.highlight-row td:first-child{color:var(--navy);}
+
+/* BULLET LIST */
+.rpt-list{list-style:none;margin:0.75rem 0 1.25rem;display:flex;flex-direction:column;gap:0.55rem;}
+.rpt-list li{font-size:0.9rem;line-height:1.75;color:var(--text-mid);padding-left:1.2rem;position:relative;}
+.rpt-list li::before{content:'';position:absolute;left:0;top:0.7rem;width:5px;height:1px;background:var(--gold);}
+
+/* SECTOR CARDS */
+.sector-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.75rem 0;}
+@media(max-width:620px){.sector-grid{grid-template-columns:1fr;}}
+.sector-card{background:var(--cream);border:1px solid var(--border);padding:1.5rem;border-radius:2px;}
+.sector-card-label{font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:0.6rem;}
+.sector-card-title{font-family:'Cormorant Garant',serif;font-size:1.15rem;font-weight:500;color:var(--text-dark);margin-bottom:0.6rem;}
+.sector-card p{font-size:0.83rem;line-height:1.75;color:var(--text-muted);}
+
+/* PREVIEW CUTOFF */
+.preview-fade{position:relative;margin-top:1rem;padding-bottom:5rem;overflow:hidden;}
+.preview-fade::after{content:'';position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(to bottom,transparent,var(--white) 80%);}
+
+/* BUY CTA */
+#buy-cta{background:var(--navy);padding:5rem 5vw;}
+.cta-inner{max-width:700px;margin:0 auto;text-align:center;}
+.cta-pre{font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;display:flex;align-items:center;justify-content:center;gap:0.5rem;}
+.cta-pre::before,.cta-pre::after{content:'';display:block;width:24px;height:1px;background:var(--gold);}
+.cta-title{font-family:'Cormorant Garant',serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:500;color:var(--white);line-height:1.1;margin-bottom:1rem;}
+.cta-title em{color:var(--gold);font-style:italic;}
+.cta-sub{font-size:0.92rem;line-height:1.8;color:rgba(253,250,245,0.62);max-width:540px;margin:0 auto 2.5rem;}
+.cta-price{font-family:'Cormorant Garant',serif;font-size:3.8rem;font-weight:500;color:var(--white);line-height:1;margin-bottom:0.35rem;}
+.cta-price-label{font-size:0.75rem;font-weight:400;color:rgba(253,250,245,0.4);letter-spacing:0.08em;margin-bottom:2.5rem;}
+.btn-buy-cta{display:inline-block;background:var(--gold);color:var(--navy);text-decoration:none;font-size:0.84rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:1.1rem 3rem;border-radius:2px;transition:background 0.2s,transform 0.15s;margin-bottom:1.5rem;}
+.btn-buy-cta:hover{background:var(--gold-light);transform:translateY(-2px);}
+.cta-features{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-top:3rem;padding-top:2.5rem;border-top:1px solid rgba(196,152,74,0.15);}
+.cta-feat{display:flex;align-items:flex-start;gap:0.65rem;max-width:160px;text-align:left;}
+.cta-feat-bar{width:2px;min-height:32px;background:var(--gold);flex-shrink:0;margin-top:3px;opacity:0.55;}
+.cta-feat-text{font-size:0.78rem;line-height:1.6;color:rgba(253,250,245,0.5);}
+.cta-feat-text strong{display:block;color:var(--gold-light);font-weight:500;font-size:0.8rem;margin-bottom:0.1rem;}
+.cta-toc{text-align:left;max-width:560px;margin:2rem auto 0;background:rgba(255,255,255,0.04);border:1px solid rgba(196,152,74,0.12);padding:1.5rem 2rem;border-radius:2px;}
+.cta-toc-label{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1rem;}
+.cta-toc ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+.cta-toc li{font-size:0.82rem;color:rgba(253,250,245,0.5);padding-left:1.1rem;position:relative;line-height:1.5;}
+.cta-toc li::before{content:'';position:absolute;left:0;top:0.65rem;width:5px;height:1px;background:rgba(196,152,74,0.5);}
+.cta-toc li strong{color:rgba(253,250,245,0.75);font-weight:400;}
+
+/* FOOTER */
+footer{background:#060F1B;padding:3rem 5vw 2rem;border-top:1px solid rgba(196,152,74,0.12);}
+.ft-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2.5rem;gap:2rem;flex-wrap:wrap;}
+.ft-logo span:first-child{font-family:'Cormorant Garant',serif;font-size:1.35rem;font-weight:500;color:var(--white);display:block;letter-spacing:0.04em;}
+.ft-logo span:last-child{font-size:0.58rem;font-weight:300;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-top:2px;}
+.ft-tag{font-size:0.78rem;font-weight:400;color:rgba(253,250,245,0.35);margin-top:0.75rem;max-width:240px;line-height:1.65;}
+.ft-links{display:flex;gap:3.5rem;}
+.ft-col h5{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1rem;}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem;}
+.ft-col a{font-size:0.78rem;font-weight:400;color:rgba(253,250,245,0.42);text-decoration:none;transition:color 0.2s;}
+.ft-col a:hover{color:var(--gold-light);}
+.ft-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;border-top:1px solid rgba(253,250,245,0.06);flex-wrap:wrap;gap:1rem;}
+.ft-copy{font-size:0.7rem;color:rgba(253,250,245,0.22);}
+.ft-li{display:flex;gap:2rem;}
+.ft-li a{font-size:0.7rem;color:rgba(253,250,245,0.22);text-decoration:none;transition:color 0.2s;}
+.ft-li a:hover{color:rgba(253,250,245,0.5);}
+@media(max-width:700px){.ft-links{flex-direction:column;gap:2rem;}}
+
+/* COOKIE */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:rgba(10,22,40,0.98);border-top:1px solid rgba(196,152,74,0.2);padding:1.25rem 5vw;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;backdrop-filter:blur(12px);}
+.cookie-text{font-size:0.78rem;color:rgba(253,250,245,0.6);line-height:1.6;max-width:680px;}
+.cookie-text a{color:var(--gold);text-decoration:none;}
+.cookie-btns{display:flex;gap:0.75rem;flex-shrink:0;}
+.cookie-accept{background:var(--gold);color:var(--navy);border:none;padding:0.55rem 1.25rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;}
+.cookie-decline{background:transparent;color:rgba(253,250,245,0.4);border:1px solid rgba(253,250,245,0.15);padding:0.55rem 1.25rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;cursor:pointer;border-radius:2px;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+.fu{animation:fadeUp 0.65s ease forwards;opacity:0;}
+.d1{animation-delay:0.08s;}.d2{animation-delay:0.2s;}.d3{animation-delay:0.32s;}
+</style>
+</head>
+<body>
+
+<div class="cookie-banner" id="cookie-banner">
+  <p class="cookie-text">We use cookies to improve your experience. By continuing, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-accept" onclick="acceptCookie()">Accept</button>
+    <button class="cookie-decline" onclick="declineCookie()">Decline</button>
+  </div>
+</div>
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="gha-logo.png" alt="Golden Horn Advisory">
+    <span class="nav-brand">Golden Horn Advisory</span>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#sectors">Sectors</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#blog">Insights</a></li>
+      <li><a href="reports.html" class="active">Reports</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+    <button class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="preview-hero">
+  <svg class="hero-bg-lines" viewBox="0 0 1400 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="120" x2="1400" y2="120" stroke="rgba(196,152,74,0.06)" stroke-width="1"/>
+    <line x1="0" y1="300" x2="1400" y2="300" stroke="rgba(196,152,74,0.06)" stroke-width="1"/>
+    <line x1="280" y1="0" x2="280" y2="400" stroke="rgba(196,152,74,0.05)" stroke-width="1"/>
+    <line x1="700" y1="0" x2="700" y2="400" stroke="rgba(196,152,74,0.05)" stroke-width="1"/>
+    <line x1="1120" y1="0" x2="1120" y2="400" stroke="rgba(196,152,74,0.05)" stroke-width="1"/>
+    <circle cx="1150" cy="200" r="200" stroke="rgba(196,152,74,0.05)" stroke-width="1" fill="none"/>
+    <circle cx="1150" cy="200" r="120" stroke="rgba(196,152,74,0.04)" stroke-width="1" fill="none"/>
+  </svg>
+  <div class="hero-inner">
+    <div class="preview-badge fu d1">Golden Horn Advisory <span class="preview-badge-pill">Free Preview</span></div>
+    <h1 class="preview-title fu d2">CBAM &amp; EU Green Trade Compliance</h1>
+    <p class="preview-subtitle fu d2">A Practical Guide for Turkish Exporters 2026</p>
+    <div class="preview-meta fu d3">
+      <span>Market Briefing</span>
+      <span>Steel · Cement · Aluminium · Fertilisers</span>
+      <span>April 2026</span>
+      <span>15 Pages (Full Report)</span>
+    </div>
+  </div>
+</section>
+
+<!-- REPORT CONTENT -->
+<div class="report-wrap">
+
+  <!-- SECTION 1: EXECUTIVE SUMMARY -->
+  <div class="rpt-section">
+    <div class="rpt-section-num">Section 1</div>
+    <h2 class="rpt-h2">Executive Summary</h2>
+    <div class="gold-rule"></div>
+
+    <p class="rpt-p">The EU Carbon Border Adjustment Mechanism (CBAM) entered its full, payment-obligating phase on <strong>1 January 2026</strong>. The transitional reporting period ended. The bills have started.</p>
+
+    <p class="rpt-p">Turkey is the <strong>third most affected country globally</strong> — behind only Russia and China. Turkish industry faces projected CBAM costs of <strong>&euro;138 million per year by 2027</strong>, rising to <strong>&euro;2.5 billion annually by 2032</strong> (EBRD / Turkish Ministry of Environment, 2025). For steel, cement, and aluminium exporters shipping to EU buyers, this is not a future planning exercise. Certificates are being purchased by your EU customers right now, based on the emissions data you are or are not providing them.</p>
+
+    <h3 class="rpt-h3">Three Findings Every Turkish Exporter Needs to Know</h3>
+
+    <div class="findings-grid">
+      <div class="finding">
+        <div class="finding-num">1</div>
+        <div class="finding-body">
+          <strong>Turkey's steel sector has a structural cost advantage over China that CBAM makes visible.</strong>
+          <p>Turkish steel predominantly uses electric arc furnace (EAF) technology, producing approximately 0.5–0.8 tonnes of CO&#x2082; per tonne of steel. Chinese blast furnace production emits 1.8–2.1 tCO&#x2082;/tonne. At current EU ETS prices (~&euro;65/tCO&#x2082;e, April 2026), this gives Turkish EAF steel a CBAM cost advantage of roughly <strong>&euro;80–85 per tonne</strong> over Chinese supply. European buyers who understand this will actively prefer Turkish suppliers. Most do not yet understand it.</p>
+        </div>
+      </div>
+      <div class="finding">
+        <div class="finding-num">2</div>
+        <div class="finding-body">
+          <strong>If you cannot provide verified emissions data, your EU buyer pays more — and blames you for it.</strong>
+          <p>Under CBAM, the EU importer bears the legal obligation to purchase certificates. If the Turkish exporter cannot supply actual, verified emissions figures, the importer is required to use the Commission's conservative default benchmark values — which are significantly higher than real EAF emissions. An uncommunicating Turkish exporter makes their EU buyer more expensive. This is already damaging supplier relationships in 2026.</p>
+        </div>
+      </div>
+      <div class="finding">
+        <div class="finding-num">3</div>
+        <div class="finding-body">
+          <strong>Turkey's new domestic Climate Law creates a realistic path to reduced CBAM costs by 2027–2028.</strong>
+          <p>Turkey adopted a domestic Emissions Trading System in late 2025. If the EU recognises this system as equivalent, CBAM obligations for Turkish exporters could be partially or fully offset. Negotiations are active. This does not change your obligations today — but it materially changes the medium-term cost picture.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rpt-callout">
+      <p><strong>Single most important recommendation:</strong> Establish a verified emissions measurement and reporting process for your EU-bound production immediately. Send that data to your EU buyers before they ask. This single step reduces their CBAM certificate costs, strengthens your relationship, and positions you as a preferred, forward-looking supplier.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2: WHAT IS CBAM -->
+  <div class="rpt-section">
+    <div class="rpt-section-num">Section 2</div>
+    <h2 class="rpt-h2">What Is CBAM and Why Turkey Is Affected</h2>
+    <div class="gold-rule"></div>
+
+    <h3 class="rpt-h3">What CBAM Is</h3>
+    <p class="rpt-p">The Carbon Border Adjustment Mechanism is a carbon tax on imports into the European Union, calibrated to the price of carbon within the EU's own Emissions Trading System (EU ETS). Its purpose is to prevent "carbon leakage" — the situation where EU producers, burdened with carbon costs domestically, lose market share to imports from countries with lower or no carbon pricing.</p>
+    <p class="rpt-p">Under CBAM, when a European company imports steel, cement, aluminium, fertilisers, electricity, or hydrogen, it must purchase CBAM certificates equivalent to the embedded carbon emissions in those products. The certificate price tracks the EU ETS price, which stood at approximately <strong>&euro;50–75/tCO&#x2082;e in April 2026</strong>.</p>
+    <p class="rpt-p"><strong>CBAM is not paid by the Turkish exporter. It is paid by the EU importer.</strong> However, this distinction is less meaningful in practice than it sounds. The CBAM cost either gets negotiated into the price (reducing what the EU buyer will pay for Turkish goods) or absorbed by the EU importer who then seeks lower-carbon suppliers. Either way, Turkish exporters who ignore CBAM will find their products becoming commercially less attractive.</p>
+
+    <h3 class="rpt-h3">Timeline: How We Got Here</h3>
+    <div class="rpt-table-wrap">
+      <table>
+        <thead><tr><th>Period</th><th>Obligation</th></tr></thead>
+        <tbody>
+          <tr><td>Q4 2023 – Q4 2025</td><td>Transitional phase: EU importers report embedded emissions quarterly; no payment required</td></tr>
+          <tr class="highlight-row"><td><strong>1 January 2026</strong></td><td><strong>Definitive phase begins: certificate purchase and surrender required</strong></td></tr>
+          <tr><td>31 May 2027</td><td>First annual certificate surrender deadline (for full-year 2026 imports)</td></tr>
+          <tr><td>Ongoing</td><td>Annual cycle: import data reported &rarr; certificates purchased &rarr; surrendered by 31 May</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="rpt-p"><strong>The transitional phase is over.</strong> Companies that treated CBAM as a future concern now face compliance requirements for all 2026 imports.</p>
+
+    <h3 class="rpt-h3">Why Turkey Is the Third Most Affected Country</h3>
+    <p class="rpt-p">Turkey's exposure is a function of two factors: the volume of CBAM-covered goods exported to the EU, and the carbon intensity of Turkish production processes.</p>
+    <p class="rpt-p">Turkey exports significant quantities of steel (particularly reinforcing bar, wire rod, and hot-rolled coil), cement clinker, and aluminium products to EU markets. The EU is Turkey's largest trading partner, with <strong>&euro;96 billion in bilateral trade in goods</strong> in 2024 (European Commission DG Trade).</p>
+    <p class="rpt-p">The EBRD, in its joint assessment with the Turkish Ministry of Environment, calculated that:</p>
+    <ul class="rpt-list">
+      <li>At &euro;75/tCO&#x2082;e: CBAM costs reach <strong>&euro;138 million per year for Turkish industry by 2027</strong></li>
+      <li>At &euro;150/tCO&#x2082;e (a plausible scenario by 2032 as EU ETS tightens): <strong>&euro;2.5 billion per year</strong></li>
+    </ul>
+    <p class="rpt-p">Only Russia (dominant in fertilisers and metals) and China (dominant in steel volume) face greater aggregate exposure globally.</p>
+
+    <div class="rpt-action">
+      <div class="rpt-action-label">What to do now</div>
+      <p>Identify your top 5 EU export customers for steel, cement, or aluminium. Ask them directly whether they have begun CBAM reporting and what emissions data they hold for your products. This conversation should happen in April–May 2026, not after the reporting deadline.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 3: SECTORS (PARTIAL) -->
+  <div class="rpt-section">
+    <div class="rpt-section-num">Section 3</div>
+    <h2 class="rpt-h2">Which Sectors and Products Are in Scope</h2>
+    <div class="gold-rule"></div>
+
+    <h3 class="rpt-h3">Primary Sectors — Covered from 1 January 2026</h3>
+
+    <div class="sector-grid">
+      <div class="sector-card">
+        <div class="sector-card-label">Largest exposure for Turkey</div>
+        <div class="sector-card-title">Steel &amp; Iron</div>
+        <p>Turkey exported approximately <strong>&euro;3.2 billion</strong> in iron and steel to the EU in 2024. Covered products include hot-rolled and cold-rolled flat products, reinforcing bar (rebar), wire rod, and steel tubes. This is the sector where CBAM costs are highest in absolute terms and where the EAF advantage is most powerful.</p>
+      </div>
+      <div class="sector-card">
+        <div class="sector-card-label">Significant export volumes</div>
+        <div class="sector-card-title">Cement</div>
+        <p>Clinker and cement exports from Turkey to the EU are fully in scope. Cement is inherently carbon-intensive — approximately 0.7–0.9 tCO&#x2082; per tonne of clinker. Turkey is a major cement exporter, particularly to southern and eastern European construction markets.</p>
+      </div>
+    </div>
+
+    <!-- FADE OUT — preview ends here -->
+    <div class="preview-fade">
+      <p class="rpt-p">Also covered from 1 January 2026: <strong>Aluminium</strong> (primary and secondary), <strong>Fertilisers</strong> (urea, ammonium nitrate), <strong>Electricity</strong>, and <strong>Hydrogen</strong>. The full report details each sector's specific HS codes, emissions benchmarks, and commercial implications for Turkish exporters and EU buyers.</p>
+      <p class="rpt-p">The full report also covers: what is <em>not</em> in scope (and when that will change), whether company size matters, and how to run a quick audit of your EU export invoices to calculate your buyers' CBAM exposure today.</p>
+    </div>
+  </div>
+
+</div><!-- /report-wrap -->
+
+<!-- BUY CTA -->
+<section id="buy-cta">
+  <div class="cta-inner">
+    <div class="cta-pre">Full Report</div>
+    <h2 class="cta-title">Get the complete<br><em>15-page report</em></h2>
+    <p class="cta-sub">Financial impact tables, the 8-step compliance roadmap, contract clause templates, the EAF advantage analysis, and your 90-day action plan — all in one document.</p>
+    <div class="cta-price">$500</div>
+    <div class="cta-price-label">One-time purchase &mdash; instant download</div>
+    <a href="https://rikialu.gumroad.com/l/cbam-turkey-2026" class="btn-buy-cta" target="_blank">Buy the Full Report &rarr;</a>
+
+    <div class="cta-toc">
+      <div class="cta-toc-label">What's included in the full report</div>
+      <ul>
+        <li><strong>Section 3 (continued)</strong> — Aluminium, Fertilisers, scope limits, SME thresholds</li>
+        <li><strong>Section 4</strong> — Financial impact analysis: scenario tables for steel, cement &amp; aluminium at three ETS price points</li>
+        <li><strong>Section 5</strong> — 8-step compliance roadmap with third-party verifier guidance</li>
+        <li><strong>Section 6</strong> — Exactly what documents your EU buyers need and how to frame the commercial conversation</li>
+        <li><strong>Section 7</strong> — How compliant exporters win market share: &euro;85/tonne EAF advantage vs. China with full data</li>
+        <li><strong>Section 8</strong> — Regulatory deadline calendar and 90-day action plan (April–June 2026)</li>
+        <li><strong>Appendix A</strong> — Key CBAM terms glossary</li>
+        <li><strong>Appendix B</strong> — Full sources list</li>
+      </ul>
+    </div>
+
+    <div class="cta-features">
+      <div class="cta-feat"><div class="cta-feat-bar"></div><div class="cta-feat-text"><strong>Instant Download</strong>PDF delivered immediately after purchase</div></div>
+      <div class="cta-feat"><div class="cta-feat-bar"></div><div class="cta-feat-text"><strong>April 2026 Data</strong>Current EU ETS prices and Turkey-specific figures</div></div>
+      <div class="cta-feat"><div class="cta-feat-bar"></div><div class="cta-feat-text"><strong>Actionable</strong>Checklists, tables, and contract clause templates</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-top">
+    <div>
+      <div class="ft-logo"><span>Golden Horn Advisory</span><span>Turkey &middot; Europe Trade Consultancy</span></div>
+      <p class="ft-tag">Strategic intelligence for SMEs navigating the Turkey–Europe corridor.</p>
+    </div>
+    <div class="ft-links">
+      <div class="ft-col"><h5>Services</h5><ul><li><a href="index.html#services">Market Entry</a></li><li><a href="index.html#services">Trade Intelligence</a></li><li><a href="index.html#services">Supplier Sourcing</a></li><li><a href="index.html#services">Customs Advisory</a></li></ul></div>
+      <div class="ft-col"><h5>Company</h5><ul><li><a href="index.html#about">About</a></li><li><a href="reports.html">Reports</a></li><li><a href="index.html#blog">Insights</a></li><li><a href="index.html#contact">Contact</a></li></ul></div>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <p class="ft-copy">&copy; 2026 Golden Horn Advisory.</p>
+    <div class="ft-li"><a href="privacy-policy.html">Privacy Policy</a><a href="reports.html">All Reports</a></div>
+  </div>
+</footer>
+
+<script>
+function acceptCookie(){
+  document.getElementById('cookie-banner').style.display='none';
+  try{localStorage.setItem('gha-cookie','1');}catch(e){}
+}
+function declineCookie(){
+  document.getElementById('cookie-banner').style.display='none';
+}
+window.addEventListener('load',()=>{
+  try{if(localStorage.getItem('gha-cookie'))document.getElementById('cookie-banner').style.display='none';}catch(e){}
+});
+
+function toggleMenu(){
+  const nl=document.getElementById('nav-links');
+  if(nl.style.display==='flex'){nl.style.display='';}
+  else{nl.style.cssText='display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:#0A1628;padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(196,152,74,0.2);z-index:99;';}
+}
+
+window.addEventListener('scroll',()=>{
+  const nav=document.getElementById('main-nav');
+  if(window.scrollY>60){nav.classList.add('scrolled');}
+  else{nav.classList.remove('scrolled');}
+});
+</script>
+</body>
+</html>
